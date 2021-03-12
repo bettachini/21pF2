@@ -6,7 +6,9 @@
 \begin{document}
 \begin{center}
 \textbf{Física 2} (Físicos) \hfill \textcopyright {\tt DF, FCEyN, UBA}\\
-	\textsc{\LARGE Oscilador armónico libre de un único grado de libertad}\\
+%	\textsc{\large Física 2 (Físicos)} - Prof. Diana Skigin - 2"o cuat. 2014\\
+%	\textsc{\large Primer Cuatrimestre - 2014}\\
+	\textsc{\LARGE Oscilador armónico de un único grado de libertad}\\
 \end{center}
 
 
@@ -18,10 +20,10 @@ Para un péndulo de longitud $l$ en presencia de un campo gravitatorio de consta
 \begin{enumerate}
 	\item Discuta todas las aproximaciones que realiza para arribar al modelo de "péndulo ideal", y para su dinámica en "pequeñas oscilaciones".
 	\item Escriba y resuelva las ecuaciones de movimiento 
-	\item (*) Grafique la tensión del hilo en función del ángulo para pequeñas oscilaciones de un péndulo ideal.
-	En particular piense como afecta esta tensión la validez de la hipótesis de longitud de hilo constante.
-	Dé valores de orden de magnitud razonables a los parámetros que necesite para la discusión.
-	¿Es razonable la aproximación g = constante?
+	\item (*) Grafique la tension del hilo en funcion del ángulo para pequeñas oscilaciones de un pendulo ideal.
+	En particular pienes como afecta esta tensión la validez de la hipétesis de longitud de hilo constante.
+	Dé valores de orden de magnitud razonables a los parametros que necesite para la discusion.
+	¿Es razonable la aproximacion g = constante?
 \end{enumerate}
 
 
@@ -49,8 +51,8 @@ El sistema de la figura muestra un peso, de masa $m$, suspendido equidistante de
 \textbf{Resorte colgante}\\
 Resuelva la dinámica para un peso colgado de un resorte vertical que pende de un techo.
 Use como origen de la coordenada relevante cero la posición del resorte en reposo sin peso.
-Escriba la energía potencial (gravitatoria + elástica) y encuentre la posición de equilibrio.
-Al oscilar, ¿la energía potencial es solo la del resorte o también ``oscila'' la potencial gravitatoria?
+Escriba la energıa potencial (gravitatoria + elástica) y encuentre la posición de equilibrio.
+Al oscilar, ¿la energıa potencial es solo la del resorte o también "oscila" la potencial gravitatoria?
 
 
 

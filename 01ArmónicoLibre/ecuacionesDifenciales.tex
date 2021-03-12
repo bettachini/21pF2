@@ -1,0 +1,44 @@
+\documentclass[11pt,spanish,a4paper]{article}
+% Versión 1.er cuat 2021 Víctor Bettachini < bettachini@df.uba.ar >
+
+\input{../introFCEyN}
+
+\begin{document}
+\begin{center}
+\textbf{Física 2} (Físicos) \hfill \textcopyright {\tt DF, FCEyN, UBA}\\
+	\textsc{\LARGE Repaso de ecuaciones diferenciales lineales}\\
+\end{center}
+
+
+Si puede terminar este breve ejercicio dispone del bagaje matemático necesario para comenzar la materia.
+
+\begin{enumerate}
+
+\item La siguiente es una ecuación lineal diferencial de segundo grado
+\[
+	\ddot{x} + a x = 0. \notag
+\]
+\begin{enumerate}
+	\item	Halle la solución más general posible que será una combinación lineal de las soluciones que vaya hallando.
+	Para hacer esto ensaye las siguientes soluciones
+	\begin{enumerate}
+		\item \( x(t) = A \cos(\omega t + \varphi ) \),
+		\item \( x(t) = A_1 \cos( \omega t) + B_1 \sen(\omega t) \), y
+		\item \( x(t) = C \operatorname{e}^{\lambda t} \) .
+	\end{enumerate}
+	\item ¿Qué representan \(\omega\) y \(\lambda\)?
+	\item Verifique que las soluciones obtenidas son equivalentes entre sí.
+	O dicho de otra manera, encuentre las relaciones entre \(A, A_1, B_1 y C\).
+	Para eso use las siguientes relaciones, que usaremos \textbf{muy frecuentemente} en la materia:
+	\begin{itemize}
+		\item \(\operatorname{e}^{i \alpha}= \cos(\alpha) + i \sin(\alpha) \) que es la \textit{igualdad de Euler},
+		\item \( \sen( \alpha \pm \beta ) = \sin(\alpha) \cos(\beta) \pm \cos(\alpha) \sen(\beta) \), y
+		\item \( \cos( \alpha \pm \beta ) = \cos(\alpha) \cos(\beta) \mp \sin(\alpha) \sen(\beta) \).
+	\end{itemize}
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+\end{document}
