@@ -6,10 +6,7 @@
 \begin{document}
 \begin{center}
 \textbf{Física 2} (Físicos) \hfill \textcopyright {\tt DF, FCEyN, UBA}\\
-%	\textsc{\large Física 2 (Físicos)} - Prof. Diana Skigin - 2"o cuat. 2014\\
-%	\textsc{\large Primer Cuatrimestre - 2014}\\
-	\textsc{\LARGE Sistemas de N grados de libertad}
-	% \textsc{\large Guía 1:} Oscilaciones libres y forzadas
+	\textsc{\LARGE Sistemas de múltiples grados de libertad}
 \end{center}
 
 Los ejercicios con (*) son opcionales.
@@ -19,26 +16,17 @@ Los ejercicios con (*) son opcionales.
 
 \section*{Modos normales de oscilación}
 
-\item El sistema de la figura está en ausencia de gravedad
-\begin{figure}[h]
-\centering{}\includegraphics[clip,scale=0.25]{ej1-6}
-\end{figure}
-\begin{enumerate}
-	% \item Considere el sistema de la figura en ausencia de gravedad y obtenga sus frecuencias naturales de oscilación y los modos normales correspondientes.
-	\item Obtenga sus frecuencias naturales de oscilación y los modos normales correspondientes.
-	Escriba las ecuaciones de movimiento de cada masa.
-	\item Sabiendo que a $t=0$ el sistema satisface las siguientes condiciones: $\Psi_{a}(0)=1,\,\Psi_{b}(0)=0$ y que se encuentra en reposo, encuentre el movimiento de cada partícula.
-	\item Analice cómo se modifica el resultado por la presencia de la gravedad.
-\end{enumerate}
 
-
-
-\item El sistema simplificado de la figura que se basa en una molécula triatómica simétrica.
+\item
+\begin{minipage}[t][2.6cm]{0.7\textwidth}
+\textbf{Molécula triatómica}
+Se esquematiza en la figura una molécula triatómica simétrica.
 En el equilibrio dos átomos de masa $m$ están situados a ambos lados del átomo de masa $M=2m$ y vinculados por resortes de constante $k$ y longitud natural $l_0$.
-Como sólo estamos interesados en analizar los modos longitudinales, supondremos que las masas se encuentran dentro de una canaleta que impide todo tipo de movimiento en la dirección transversal. 
-\begin{figure}[h]
-\centering{}\includegraphics[clip,scale=0.25]{ej1-9}
-\end{figure}
+Como sólo estamos interesados en analizar los modos longitudinales, supondremos que las masas se encuentran dentro de una canaleta que impide todo tipo de movimiento en la dirección transversal.
+\end{minipage}
+\begin{minipage}[c][0cm][t]{0.25\textwidth}
+  \includegraphics[width=\textwidth]{ej1-9}
+\end{minipage}
 \begin{enumerate}
 	\item Encuentre las ecuaciones de movimiento de cada masa. 
 	\item Halle las frecuencias de los modos normales. 
@@ -49,12 +37,14 @@ Como sólo estamos interesados en analizar los modos longitudinales, supondremos
 
 
 
-\item Analice las oscilaciones transversales del problema anterior.
+\item
+\begin{minipage}[t][2.2cm]{0.5\textwidth}
+Analice las oscilaciones transversales del problema anterior.
 Para su mejor comprensión puede imaginarlo como el esquema de la figura, en el cual las masas de los extremos pueden subir/bajar pero solidarios a la barra enhebrada a los vástagos laterales. 
-\begin{figure}[h]
-\centering{}
-\includegraphics[clip,scale=0.65]{moleculaT.png}
-\end{figure}
+\end{minipage}
+\begin{minipage}[c][0cm][t]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{moleculaT}
+\end{minipage}
 \begin{enumerate}
 	\item Encuentre las ecuaciones de movimiento de las masas. ¿Qué diferencias hay entre la ecuación de movimiento para resortes \emph{slinky} y resortes con $l_0\ne 0$ en la aprox. de pequeñas oscilaciones?
 	\item Halle las frecuencias de los modos normales.
@@ -63,33 +53,24 @@ Determine los desplazamientos de cada masa como función del tiempo (solución m
 	\item ¿Qué condiciones iniciales que permiten excitar sólo el segundo modo?
 	\item Si se fuerza la masa del centro con frecuencias incrementalmente mayores, ¿qué modos se van observando?
 	\item ¿Cómo se modifican los resultados anteriores si el extremo de la derecha se fija a la pared como se indica en la figura a continuación?.
-\begin{figure}[h]
-	\centering{}
-	\includegraphics[clip,scale=0.65]{moleculaT_fijo_libre}
-\end{figure} 
+	\begin{figure}[h]
+		\centering{}
+		\includegraphics[clip,scale=0.5]{moleculaT_fijo_libre}
+	\end{figure} 
 \end{enumerate}
 
 
-
-\item En el sistema de la figura se tienen dos partículas de masa $m$ unidas a las paredes con resortes verticales de longitud natural $l_0$ ($l_0< L/2$) y constante $k_1$, y con resortes horizontales $l_0= 0$ (\emph{slinkies}) y constante $k_2$.
-Imagine que las partículas tienen la libertad de moverse en el plano y que el sistema es en ausencia de gravedad.
-\begin{figure}[h]
-\centering{}\includegraphics[clip,scale=0.45]{resortes_acoplados}
-\end{figure}
-\begin{enumerate}
-    \item ¿Bajo qué aproximaciones es posible decir que el movimiento más general posible de cada una de las masas es una superposición lineal del movimiento más general posible de las oscilaciones longitudinales y de las oscilaciones transversales? Demuestre su afirmación.
-    \item Considerando la aproximación del punto anterior, determine las frecuencias propias y los modos normales de oscilación: longitudinales, transversales y de la solución más general posible para un movimiento arbitrario en el plano.
-\end{enumerate}
 
 \subsection*{Batidos (o latidos, \emph{beats})}
 
-\item \label{pendacop} Considere el sistema de dos péndulos de igual longitud $l$ pero de masas diferentes $m_{a}$ y $m_{b}$, acoplados mediante un resorte
+\item \label{pendacop}
+\begin{minipage}[t][2.2cm]{0.75\textwidth}
+Considere el sistema de dos péndulos de igual longitud $l$ pero de masas diferentes $m_{a}$ y $m_{b}$, acoplados mediante un resorte
 de constante $k$.
-\begin{figure}[h]
-\centering{}\includegraphics[clip,scale=0.3]{ej1-7}
-\end{figure}
-
-
+\end{minipage}
+\begin{minipage}[c][2cm][t]{0.2\textwidth}
+  \includegraphics[width=\textwidth]{ej1-7}
+\end{minipage}
 \begin{enumerate}
 	\item Escriba las ecuaciones de movimiento de cada masa. considerando pequeñas oscilaciones, ¿es relevante considerar $l_0\neq0$? ¿Qué cambia si el resorte es \emph{slinky}?   
 	\item Obtenga las frecuencias naturales del sistema y sus modos normales de oscilación.
@@ -101,16 +82,21 @@ Calcule el valor medio de la energía de interacción entre las dos partículas.
 \end{enumerate}
 
 
-\item \label{2masitas} Considere el sistema de la figura. Las masas están apoyadas en una mesa sin rozamiento, sujetas a las paredes por resortes de constante
+
+\item \label{2masitas}
+\begin{minipage}[t][2.8cm]{0.7\textwidth}
+Considere el sistema de la figura. Las masas están apoyadas en una mesa sin rozamiento, sujetas a las paredes por resortes de constante
 $k$ y unidas por otro resorte de constante $k'$.
-\begin{figure}[h]
-\centering{}\includegraphics[clip,scale=0.25]{ej1-8}
-\end{figure}
 \begin{enumerate}
 	\item Obtenga las frecuencias y los modos transversales del sistema. 
 	\item ¿Bajo qué condiciones espera observar batidos?
 	¿Qué son los batidos?
 \end{enumerate}
+\end{minipage}
+\begin{minipage}[c][0cm][t]{0.25\textwidth}
+  \includegraphics[width=\textwidth]{ej1-8}
+\end{minipage}
+
 
 
 \subsection*{Sistemas forzados}

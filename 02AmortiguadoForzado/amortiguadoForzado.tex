@@ -17,27 +17,27 @@
 
 \subsection*{Oscilador armónico amortiguado}
 
-\item Considere el movimiento de una masa $m$ sujeta a un resorte de constante elástica $K= m \omega_0^2$ y constante de amortiguamiento por unidad de masa $\Gamma$. \\
-Demuestre que el resultado para el oscilador ``sobreamortiguado'' dado por
-\[
-x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)\cosh\left(\left|\omega\right|t\right)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]\frac{\senh\left(\left|\omega\right|t\right)}{\left|\omega\right|}\right\} 
-\]
-se deduce de las siguientes
-\[
-x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)\cos\left(\omega t\right)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]\frac{\sen\left(\omega t\right)}{\omega}\right\} 
-\]
-\[
-\omega=\pm i\left|\omega\right|,\,\,\,\left|\omega\right|=\sqrt{\frac{1}{4}\Gamma^{2}-\omega_{0}^{2}}
-\]
-\textbf{Sugerencia}: verifique las identidades $\cos\left(ix\right)=\cosh\left(x\right)$ y $\sen\left(ix\right)=i\senh\left(x\right)$; luego úselas.
-
-
-
-\item Comenzando con la ecuación general dada en el problema anterior para oscilaciones libres subamortiguadas, muestre que para amortiguamiento crítico la solución es:
-\[
-x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]t\right\} 
-\]
-Muestre que también se obtiene este resultado comenzando con la ecuación para oscilaciones sobreamortiguadas.
+\item Una pesa de masa $m$ está sujeta a un resorte de constante elástica $k$, por lo que la frecuencia natural de oscilación es $\omega_0 = \sqrt{ \frac{k}{m} }$.
+Actúa en este sistema un amortiguador que provee una amortiguación lineal con la velocidad de constante de amortiguamiento \(c\) que por unidad de masa es $\Gamma= c/m$.
+	\begin{enumerate}
+	\item El resultado para que este oscilador esté \emph{sobreamortiguado} está dado por
+	\[
+		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cosh \left( \tilde{\Omega}  t \right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \senh \left( \tilde{\Omega} t \right) }{ \tilde{\Omega} } \right\} 
+	\]
+	se deduce de
+	\[
+		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cos \left( \tilde{\omega} t\right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \sen \left( \tilde{\omega} t \right)}{ \tilde{\omega} }\right\} 
+	\]
+	\[
+		\tilde{\omega} = \pm i \tilde{\Omega} ,\qquad \tilde{\Omega} = \sqrt{\frac{1}{4}\Gamma^{2}-\omega_{0}^{2}}
+	\]
+	\textbf{Sugerencia}: verifique las identidades $\cos\left(ix\right)=\cosh\left(x\right)$ y $\sen\left(ix\right)=i\senh\left(x\right)$; luego úselas.
+	\item Comenzando con la ecuación general para oscilaciones libres subamortiguadas, muestre que para amortiguamiento crítico la solución es:
+	\[
+		x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]t\right\} 
+		\]
+	Muestre que también se obtiene este resultado comenzando con la ecuación para oscilaciones sobreamortiguadas.
+\end{enumerate}
 
 
 
