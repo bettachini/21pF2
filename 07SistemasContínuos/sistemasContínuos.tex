@@ -1,0 +1,105 @@
+\documentclass[11pt,spanish,a4paper]{article}
+% Versión 1.er cuat 2021 Víctor Bettachini < bettachini@df.uba.ar >
+
+\input{../introFCEyN}
+
+\begin{document}
+\begin{center}
+\textbf{Física 2} (Físicos) \hfill \textcopyright {\tt DF, FCEyN, UBA}\\
+	\textsc{\LARGE Sistemas contínuos}
+\end{center}
+
+Los ejercicios con (*) son opcionales.
+
+\begin{enumerate}
+
+
+\subsection*{Cuerda}
+
+\item Se tiene una cuerda de longitud $L$ y densidad lineal de masa $\mu$ sometida a una tensión $T_{0}$.
+Proponga como solución de la ecuación de ondas para un modo normal a la expresión: $\Psi(x,t)= A \sen{ \left(k x+ \varphi \right ) } \cos{ \left( \omega t + \theta \right) }$.
+Tome el sistema de coordenadas con $x=0$ en un extremo de la cuerda y $x=L$ en el otro.
+Encuentre la forma particular que adopta la solución propuesta en los siguientes casos: 
+\begin{enumerate}
+	\item $\Psi(0,t) = \Psi(L,t) = 0$ (ambos extremos están fijos). 
+	\item $\Psi(0,t) = 0$ y $\pdv{\Psi}{x}$ $(L,t)= 0$ (un extremo está fijo y el otro está libre).
+	% \item $\Psi(0,t)= 0$ y $\frac{\partial \Psi}{\partial x}(L,t)= 0$ (un extremo está fijo y el otro está libre).
+	¿Imponer que un extremo se encuentre ``libre'' es equivalente a no imponer condiciones de contorno sobre ese extremo?
+	¿Cómo lograría un extremo ``libre'' para la cuerda? 
+	\item $\pdv{\Psi}{x}$$(0,t)=$$ \pdv{\Psi}{x}$ $(L,t)= 0$ (ambos extremos se encuentran libres).
+	% \item $\frac{\partial \Psi}{\partial x}(0,t)= \frac{\partial\Psi}{\partial x}(L,t)=0$ (ambos extremos se encuentran libres).
+	¿A qué corresponde el modo de frecuencia mínima?
+	¿Cuál es la frecuencia de oscilación de ese modo? 
+	\item Ahora tome un sistema de coordenadas con $x=0$ en el centro de la cuerda.
+	Halle la forma que adopta la solución general propuesta si $\Psi(-L/2,t)= \Psi(L/2,t)= 0$ (ambos extremos fijos).
+\end{enumerate}
+
+
+\item Se tiene una cuerda de \SI{20}{\centi\metre} de longitud y \SI{5}{\gram} de masa, sometida a una tensión de \SI{120}{\newton}.
+Calcule sus modos naturales de oscilación.
+¿Son todos audibles para el oído humano (\(\SI{20}{\hertz} < \nu < \SI{20}{\kilo\hertz}\))?
+
+
+\item Consideremos que las cuatro cuerdas de un violín son de igual longitud, y que emiten en su modo fundamental las notas: sol$_\text{2}= \SI{196}{\hertz}$, re$_\text{3}= \SI{294}{\hertz}$, la$_\text{3}= \SI{440}{\hertz}$ y mi$_\text{4}= \SI{659}{\hertz}$.
+De la primera a la cuarta las cuerdas son de distinto material y diámetro:
+\begin{tasks}[style=enumerate](2)
+	\task \isotope{Al} \(\rho= \SI{2.6}{\gram\over\centi\metre\cubed}\), \(d_1= \SI{0,09}{\centi\metre}\)
+	\task Aleación \isotope{Al}-\isotope{Ni} $\rho = \SI{1.2}{\gram\over\centi\metre\cubed}$, $d_2 = \SI{0.12}{\centi\metre}$
+	\task Aleación \isotope{Al}-\isotope{Ni} $\rho = \SI{1.2}{\gram\over\centi\metre\cubed}$, $d_3 = \SI{0.1}{\centi\metre}$
+	\task Acero $\rho = \SI{7.5}{\gram\over\centi\metre\cubed}$, $d_4 = \SI{0.1}{\centi\metre}$.
+\end{tasks}
+Calcular las tensiones a las que deben estar sometidas con respecto a la de la$_\text{3}$.
+
+
+\item Una cuerda de longitud $L$ fija en sus extremos es lanzada a oscilar con igual amplitud en sus dos modos de menor frecuencia.
+Considere que parte del reposo. 
+\begin{enumerate}
+	\item Encuentre el apartamiento del equilibrio para cada punto de la cuerda en función del tiempo.
+	\item ¿Con qué período se repite el movimiento?
+	\item Grafíquelo para cuatro instantes equiespaciados dentro de un período. 
+\end{enumerate}
+
+
+\subsection*{Gas en un tubo unidimensional}
+
+\item Se tiene un tubo lleno de aire de longitud $L$. Considere las siguientes posibilidades: 
+\begin{tasks}(3)
+	\task Cerrado en ambos extremos.
+	\task Uno abierto el otro cerrado.
+	\task Ambos extremos abiertos.
+\end{tasks}
+Asuma conocidos: $L$, $v_\text{sonido}$, la presión atmosférica $p_0$, $\rho_{0}= \frac{ \gamma p_0 }{ v_\text{sonido}^2}$ y que $\gamma= \frac{C_p}{C_v}= \frac{7}{5}$ para un gas diatómico.
+Halle para cada una de dichas situaciones: 
+\begin{enumerate}
+	\item Las posibles longitudes de onda con las que puede vibrar el aire en el tubo, y sus correspondientes frecuencias. 
+	\item Elija un sistema de referencia conveniente, y escriba la expresión más general para el desplazamiento de las partículas $\Psi(x,t)$.
+	¿Qué parámetros conoce de dicha expresión?
+	¿De qué dependen los que no conoce? 
+	\item A partir de la expresión de $\Psi(x,t)$, hallar el apartamiento de la presión respecto a la atmosférica $\delta p(x,t)$.
+	¿Cuál es la diferencia de fase entre ellas?
+	¿Cuál es la amplitud máxima de presión? 
+	\item Hallar la función de densidad $\rho(x,t)$.
+	¿Cuál es amplitud máxima?
+\end{enumerate}
+
+
+\item 
+\begin{enumerate}
+\item ¿Qué longitud debe tener un tubo de órgano abierto en ambos extremos para producir un sonido de \SI{440}{\hertz}? 
+\item Si uno de sus extremos está cerrado y se desea producir el mismo tono en su primer armónico, ¿qué longitud deberá tener?
+\end{enumerate}
+
+
+\item Se tiene un tubo cerrado en uno de sus extremos; su longitud es menor a \SI{1}{\metre}.
+Se acerca al extremo abierto un diapasón que está vibrando con $\nu = \SI{440}{\hertz}$.
+Considere $v_\text{sonido} = \SI{330}{\metre\over\second}$.
+\begin{enumerate}
+	\item Hallar las posibles longitudes del tubo para que haya resonancia.
+	Para cada una de ellas, ¿en qué modo está vibrando el aire contenido en el tubo? 
+	\item Repita lo anterior para un tubo abierto en ambos extremos.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
