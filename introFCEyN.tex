@@ -3,18 +3,15 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-% \usepackage{float}
-
 \usepackage[spanish, es-tabla]{babel}
-\addto\shorthandsspanish{\spanishdeactivate{~<>}}
-\def\spanishoptions{argentina}
+\def\spanishoptions{argentina} % Was macht dass?
 % \usepackage{babelbib}
 % \selectbiblanguage{spanish}
+% \addto\shorthandsspanish{\spanishdeactivate{~<>}}
 
 \usepackage{graphicx}
 \graphicspath{{./figuras/}}
-
-% \usepackage{enumerate}
+% \usepackage{float}
 
 \usepackage[arrowdel]{physics}
 \newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
@@ -24,14 +21,18 @@
 
 \usepackage{tasks}
 \usepackage[inline]{enumitem}
+% \usepackage{enumerate}
+
 \usepackage{hyperref}
-% \usepackage{float}
+
 % \usepackage{amsmath}
 % \usepackage{amstext}
 % \usepackage{amssymb}
 
 \usepackage{tikz}
 \usepackage{tikz-dimline}
+\usetikzlibrary{math}
+\usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.pathmorphing}
 \usetikzlibrary{patterns}
 
