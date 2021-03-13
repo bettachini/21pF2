@@ -23,7 +23,7 @@ Ayuda: \( \int\limits_{-\infty}^{\infty} \operatorname{e}^{-\alpha x^2} \dd{x} =
 $$
 F(k)=A \operatorname{e}^{-\frac{ ( k - k_0 )^2 }{ 4 \Delta k^2 } }.
 $$
-Calcule $f(x)$ y vea que tiene una envolvente Gaussiana que modula una portadora de frecuencia $k_{0}$.
+Calcule $f(x) = \mathcal{F}^{-1}[F(k)]$ y vea que tiene una envolvente Gaussiana que modula una portadora de frecuencia $k_{0}$.
 Note que el pulso está centrado en $x=0$ y que se cumple la relación $\Delta x \Delta k = 1/2$ (el paquete Gaussiano es el de mínima incerteza).
 	\item Ahora desfase las distintas frecuencias en forma lineal, tal que:
 $$
@@ -43,6 +43,12 @@ Derive $\Delta x$ con respecto a $\Delta k$ de la expresión anterior y analice 
 \end{enumerate}
 
 
+\item (*) Muestre que si $\phi(t) \in \mathcal{R}$ y $\psi(\omega)= \mathcal{F} \left[ \phi (t) \right]$ su transformada de Fourier, esta última cumple que \( \overline{\psi}(\omega) = \psi(- \omega) \), es decir que para obtener su conjugada basta con invertir el signo de $\omega$.
+	Aproveche esto para escribir a $\phi(t)$ como superposición de senos y cosenos.
+	% \item Muestre que su transformada de Fourier $\psi(\omega)$ cumple $\psi(\omega)=\psi(-\omega)$.
+	% cumple $\psi(\omega) = \psi^*(-\omega)$ ($\psi(\omega) = |\psi(-\omega)|$).
+
+
 
 \subsection*{Propagación en medios dispersivos}
 
@@ -58,6 +64,8 @@ Si en $t=0$ el pulso se propaga hacia $x<0$, y se escribe
 Calcule $\psi(x,t)$.
 Vea cuál es la posición y el ancho del paquete como función del tiempo.
 ¿Es cierto que al viajar por un medio dispersivo cualquier paquete se ensancha?
+
+
 
 
 

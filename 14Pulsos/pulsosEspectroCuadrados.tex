@@ -1,0 +1,93 @@
+\documentclass[11pt,spanish,a4paper]{article}
+% Versión 1.er cuat 2021 Víctor Bettachini < bettachini@df.uba.ar >
+
+\input{../introFCEyN}
+
+\begin{document}
+\begin{center}
+\textbf{Física 2} (Físicos) \hfill \textcopyright {\tt DF, FCEyN, UBA}\\
+	\textsc{\LARGE Pulsos y espectros cuadrados}
+\end{center}
+
+Los ejercicios con (*) son opcionales.
+
+\begin{enumerate}
+
+
+
+
+\item
+\textbf{Espectro cuadrado}
+\(\psi(\omega)\) es un \emph{espectro cuadrado}, esto es presenta un valor constante,$\frac{1}{\Delta \omega}$, en un intervalo de frecuencias $\Delta\omega$ centrado en un $\omega_0$ y este es nulo para cualquier otra $\omega$.
+\begin{enumerate}
+	\item
+	Verifique que el correspondiente $\phi(t) = \mathcal{F}^{-1} \psi{\omega}$ está dado por:
+	$$
+		\phi(t)
+		= \frac{1}{\sqrt{2 \pi}} \left[ \frac{ \sen{ \left( \frac{\Delta \omega}{2} t \right) } }{\frac{\Delta \omega}{2} t} \right] \operatorname{e}^{i \omega_0 t}
+		= \frac{1}{\sqrt{2 \pi}} \operatorname{senc} \left( \frac{\Delta \omega}{2} t \right) \operatorname{e}^{i \omega_0 t}.
+	$$
+	\item
+	Grafique $\psi(\omega)$ y $\left|\phi(t)\right|$.
+	\item 
+	Sea $T$ un tiempo más prolongado que la duración de cualquier experimento que pueda idear.
+	Muestre que si $\Delta\omega$ es suficientemente pequeño como para que $\Delta\omega T\ll1$, entonces durante un tiempo menor que $T$, $\phi(t)$ es una función armónica de amplitud y fase casi constante.
+\end{enumerate}
+
+
+\item \textbf{Pulso cuadrado}
+\begin{enumerate}
+	\item Muestre que $\mathcal{F}$ es lineal, por tanto
+	$
+	\mathcal{F} \left[ a f(x) + b g(x) \right] = a \mathcal{F} \left[ f(x) \right] + b \mathcal{F} \left[ g(x) \right],
+	$
+	donde $a$, $b$ son constantes.
+
+	\item
+	\begin{minipage}[t][5.5cm]{0.4\textwidth}
+	\(\phi(t)\) es una serie de pulsos cuadrados de duración \(\Delta t\) que se repiten $N$ veces con un período $\tau$ (\(\Delta t < \tau\)).
+	Si \(f(n,t)\) describe la función en cualquiera de los intervalos \( [n \tau, (n+1) \tau] \) que contiene estos pulsos de amplitud no nula $\phi_0$ en $[n\tau, n \tau + \Delta t]$ de forma que \(\phi(t)= \sum_{n=0}^N f(n,t)\) , compruebe que 
+	$$
+	\mathcal{F} \left[ \phi(t) \right] = \mathcal{F} \left[ \sum_{n=0}^N f(n,t) \right] = \sum_{n=0}^N \operatorname{e}^{ - i n \omega \tau} \mathcal{F} \left[ f(0,t) \right] .
+	$$
+	\end{minipage}
+	\begin{minipage}[c][0.5cm][t]{0.5\textwidth}
+		\begin{tikzpicture}
+			\tikzmath{
+			\Dt= 1;
+			\ttau= 2;
+			\haute= 1;
+			}
+			\draw [-Latex] (0,0) -- (8,0) node [anchor=north] {\( t \)};	% eje x
+			\draw [Latex-](0,2*\haute) node [anchor=west] {\( \phi(t) \)} -- (0,0) node [anchor=north] {\(0\)};	% eje y
+			\draw [thin, dashed] (0,\haute) node [anchor=east] {\( \phi_0 \)} -- (0,\haute);
+			\draw [ultra thick] (0,\haute) -- (\Dt,\haute);	% cuerda
+			\draw [thin, dashed] (\Dt,0) node [anchor=north] {\( \Delta t \)} -- (\Dt,\haute);
+			\draw [ultra thick] (\Dt,0) -- (\ttau+\Dt,0);	% cuerda
+			\draw [thin, dashed] (\Dt+\ttau,0) node [anchor=north] {\( \tau  \)} -- (\ttau+\Dt,\haute);
+			\draw [ultra thick] (\Dt+\ttau,\haute) -- (\Dt+\ttau+\Dt,\haute);	% cuerda
+			\draw [thin, dashed] (\Dt+\ttau+\Dt,0) node [anchor=north] {\( \tau+ \Delta t \)} -- (\Dt+\ttau+\Dt,\haute);
+			\draw [ultra thick] (\Dt+\ttau+\Dt,0) -- (\Dt+\ttau+\Dt+\ttau,0);	% cuerda
+			\draw [thin, dashed] (\Dt+\ttau+\Dt+\ttau,0) node [anchor=north] {\( 2\tau \)} -- (\Dt+\ttau+\Dt+\ttau,\haute);
+			\draw [ultra thick] (\Dt+\ttau+\Dt+\ttau,\haute) -- (\Dt+\ttau+\Dt+\ttau+\Dt,\haute);	% cuerda
+			\draw [thin, dashed] (\Dt+\ttau+\Dt+\ttau+\Dt,0) node [anchor=north] {\( 2\tau+ \Delta t \)} -- (\Dt+\ttau+\Dt+\ttau+\Dt,\haute);
+		\end{tikzpicture}
+	\end{minipage}
+	\item Resuelva \(\mathcal{F} \left[ f(0,t) \right]\) para obtener la expresión completa de $\psi(\nu) = \mathcal{F} \left[ \phi(t) \right]$.
+
+	\item El rasgo más prominente de \(\psi(\nu)\) son picos en \(\nu_p = p \nu_1 \; (p \in \mathbb{N})\) donde \(\nu_1 = \frac{1}{\tau}\), es decir una serie de armónicos de \(\nu_1\).
+	Encuentre en la expresión de \(\psi(\nu)\) el término que depende de \(\tau\) responsable de este comportamiento y verifique \(\nu_p\). 
+	
+	\item De similar análisis identifique que término con dependencia en \(\Delta t\) hace que los armónicos más importantes se detecten en \(0 < \nu < \frac{1}{\Delta t}\).
+
+	\item Compruebe también que el ancho de banda de los armónicos es \(\delta \nu = \frac{2}{(N+1) \tau}\), y calcule cuanto más pequeño es que el $\Delta \nu$ entre sucesivos $\nu_p$.
+	% \item Muestre que para un valor finito de $T_\text{largo}$ el análisis de Fourier de esta pulsación cuadrada repetida casi periódicamente, consiste en una superposición de armónicos casi discretos de la frecuencia fundamental $\nu_{1}=1/T_{1}$, siendo realmente cada armónico un continuo de frecuencias que se extiende sobre una banda de ancho $\delta \nu \approx 1/ T_\text{largo}$.
+	% \item ¿Por qué $\Delta t \Delta \nu \approx 1$ si, en principio, podría $\Delta t \Delta \nu \gg 1$?
+	% La misma pregunta para $\delta \nu$ y $T_\text{largo}$.
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+\end{document}
