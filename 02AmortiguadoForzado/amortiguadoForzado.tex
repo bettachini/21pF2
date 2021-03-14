@@ -20,37 +20,55 @@
 \item Una pesa de masa $m$ está sujeta a un resorte de constante elástica $k$, por lo que la frecuencia natural de oscilación es $\omega_0 = \sqrt{ \frac{k}{m} }$.
 Actúa en este sistema un amortiguador que provee una amortiguación lineal con la velocidad de constante de amortiguamiento \(c\) que por unidad de masa es $\Gamma= c/m$.
 	\begin{enumerate}
-	\item El resultado para que este oscilador esté \emph{sobreamortiguado} está dado por
+	\item Proponga la siguiente solución homogénea: $x_h(t) = C\mathrm{e}^{-t/2\tau}\cos(\omega_1 t + \theta )$ y halle los valores de $\tau$ y de $\omega_1$.
+	¿De qué depende los valores de $C$ y $\theta$?
+	¿Porqué no es lícito imponer las condiciones iniciales a la solución homogénea?
+	\item Repase las condiciones de \(\Gamma\) y \(\omega_0\) en que se obtienen soluciones:
+	\begin{itemize}
+		\item sub-amortiguadas,
+		\item críticamente amortiguadas, y
+		\item sobre-amortiguadas,
+	\end{itemize} \label{subamortiguado}
+	graficando \(x(t)\) para distintos valores de estos parámetros.
+	\item Verifique que la solución general para el oscilador libre \emph{sobre-amortiguado}
 	\[
 		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cosh \left( \tilde{\Omega}  t \right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \senh \left( \tilde{\Omega} t \right) }{ \tilde{\Omega} } \right\} 
 	\]
-	se deduce de
+	puede obtenerse a partir de esta para el \emph{sub-amortiguado}
 	\[
-		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cos \left( \tilde{\omega} t\right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \sen \left( \tilde{\omega} t \right)}{ \tilde{\omega} }\right\} 
+		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cos \left( \tilde{\omega} t\right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \sen \left( \tilde{\omega} t \right)}{ \tilde{\omega} }\right\}, 
 	\]
+	donde \(
+		\tilde{\omega} = \pm i \tilde{\Omega}
+	\), \(
+		\tilde{\Omega} = \sqrt{\frac{1}{4}\Gamma^{2}-\omega_{0}^{2}}.
+	\)
+	\textbf{Sugerencia}: verifique y aproveche las identidades $\cos\left(ix\right)=\cosh\left(x\right)$ y $\sen\left(ix\right)=i\senh\left(x\right)$.
+	\item Escriba la expresión de la trayectoria \(x(t)\) y calcule la energía en \(x(0)\) para la condición inicial \(x(0)= x_0\) que parte del reposo, es decir \(\dot{x}(0) = 0\). 
+	\item A partir de la solución general para el oscilador libre sub-amortiguado, muestre que la solucío para el amortiguamiento crítico es
 	\[
-		\tilde{\omega} = \pm i \tilde{\Omega} ,\qquad \tilde{\Omega} = \sqrt{\frac{1}{4}\Gamma^{2}-\omega_{0}^{2}}
-	\]
-	\textbf{Sugerencia}: verifique las identidades $\cos\left(ix\right)=\cosh\left(x\right)$ y $\sen\left(ix\right)=i\senh\left(x\right)$; luego úselas.
-	\item Comenzando con la ecuación general para oscilaciones libres subamortiguadas, muestre que para amortiguamiento crítico la solución es:
-	\[
-		x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]t\right\} 
+		x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]t\right\} .
 		\]
-	Muestre que también se obtiene este resultado comenzando con la ecuación para oscilaciones sobreamortiguadas.
+	Verifique que también podría haberle obtenido a partir de la solucíon para oscilaciones sobre-amortiguadas.
 \end{enumerate}
 
 
 
 \subsection*{Oscilador armónico forzado}
+Sabemos que cualquier oscilador armónico sub-amortiguado sometido a un forzado externo transcurrido cierto tiempo la amplitud de la solución homogénea decae.
+Esto es, pasado el \emph{transitorio} solo sobrevive la solución particular que responde al forzado.
 
-\item% \quad{}
+Ya veremos en el curso que cualquier fuerza externa \(F(t)\) la podremos descomponer en componentes armónicas, es decir en sumas de términos de senos y cosenos.
+Por ahora estudiaremos un oscilador sub-amortiguado, como el presentado en \ref{subamortiguado}, al que se somete a un forzado perféctamente armónico \(F(t) = F_0 \cos(\Omega t)\).
+
+El movimiento resultante, pasado el \emph{transitorio}, puede representarse por $x_p(t) = A \sen(\Omega t) + B \cos(\Omega t)$, por lo que esta será nuestra solución particular.
+Los coeficientes de este seno y coseno dependerán de \(\Omega\), es decir serán funciones $A(\Omega)$ y $B(\Omega)$.
+
 \begin{enumerate}
-	\item Escriba la ecuación de movimiento para una masa $m$ sujeta a un resorte de constante elástica $k$ y constante de amortiguamiento por unidad de masa $\Gamma$, sobre la que se realiza una fuerza dependiente del tiempo $F(t)$. 
-	\item Proponga la siguiente solución homogénea: $x_{h}(t)=C\mathrm{e}^{-t/2\tau}\cos\left(\omega_{1}t+\theta\right)$ y halle los valores de $\tau$ y de $\omega_{1}$.
-	¿De qué depende el valor de $C$ y de $\theta$?
-	¿Es lícito plantear las condiciones iniciales sobre la solución homogénea? 
+	\item Proponga la solución particular: 
+	Obtenga expresiones para $A(\Omega)$ y $B(\Omega)$.
+	\item A partir Grafique $A(\Omega)$ y $B(\Omega)$.
  \item Considere que $F(t)$ tiene la forma $F(t)=F_{0}\cos\left(\Omega t\right)$ (discuta si se pierde generalidad al suponer que la fuerza externa tiene esa forma) y proponga la siguiente solución particular: $x_{p}(t)=A\sen\left(\Omega t\right)+B\cos\left(\Omega t\right)$.
-Obtenga $A$ y $B$. Grafique cualitativamente $A$ y $B$ en función de $\omega$. 
 	\item Grafique cualitativamente la posición de la masa en función del tiempo. 
 	\item Calcule la potencia media que se consume en el estado estacionario y la potencia media de pérdida por fricción.
 	Verifique la igualdad de ambas potencias. 
