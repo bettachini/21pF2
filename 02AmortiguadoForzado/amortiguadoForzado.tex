@@ -11,85 +11,14 @@
 \textsc{\LARGE Oscilador armónico amortiguado y forzado}\\
 \end{center}
 
+Los ejercicios con (*) entrañan una dificultad adicional y puede considerarlos opcionales.
 
 \begin{enumerate}
 
 
-\subsection*{Oscilador armónico amortiguado}
+\input{osciladorAmortiguado}
 
-\item Una pesa de masa $m$ está sujeta a un resorte de constante elástica $k$, por lo que la frecuencia natural de oscilación es $\omega_0 = \sqrt{ \frac{k}{m} }$.
-Actúa en este sistema un amortiguador que provee una amortiguación lineal con la velocidad de constante de amortiguamiento \(c\) que por unidad de masa es $\Gamma= c/m$.
-	\begin{enumerate}
-	\item Proponga la siguiente solución homogénea: $x_h(t) = C\mathrm{e}^{-t/2\tau}\cos(\omega_1 t + \theta )$ y halle los valores de $\tau$ y de $\omega_1$.
-	¿De qué depende los valores de $C$ y $\theta$?
-	¿Porqué no es lícito imponer las condiciones iniciales a la solución homogénea?
-	\item Repase las condiciones de \(\Gamma\) y \(\omega_0\) en que se obtienen soluciones:
-	\begin{itemize}
-		\item sub-amortiguadas,
-		\item críticamente amortiguadas, y
-		\item sobre-amortiguadas,
-	\end{itemize} \label{subamortiguado}
-	graficando \(x(t)\) para distintos valores de estos parámetros.
-	\item Verifique que la solución general para el oscilador libre \emph{sobre-amortiguado}
-	\[
-		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cosh \left( \tilde{\Omega}  t \right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \senh \left( \tilde{\Omega} t \right) }{ \tilde{\Omega} } \right\} 
-	\]
-	puede obtenerse a partir de esta para el \emph{sub-amortiguado}
-	\[
-		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cos \left( \tilde{\omega} t\right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \sen \left( \tilde{\omega} t \right)}{ \tilde{\omega} }\right\}, 
-	\]
-	donde \(
-		\tilde{\omega} = \pm i \tilde{\Omega}
-	\), \(
-		\tilde{\Omega} = \sqrt{\frac{1}{4}\Gamma^{2}-\omega_{0}^{2}}.
-	\)
-	\textbf{Sugerencia}: verifique y aproveche las identidades $\cos\left(ix\right)=\cosh\left(x\right)$ y $\sen\left(ix\right)=i\senh\left(x\right)$.
-	\item Escriba la expresión de la trayectoria \(x(t)\) y calcule la energía en \(x(0)\) para la condición inicial \(x(0)= x_0\) que parte del reposo, es decir \(\dot{x}(0) = 0\). 
-	\item A partir de la solución general para el oscilador libre sub-amortiguado, muestre que la solucío para el amortiguamiento crítico es
-	\[
-		x(t)=\mathrm{e}^{-\Gamma t/2}\left\{ x(0)+\left[\dot{x}(0)+\frac{1}{2}\Gamma x(0)\right]t\right\} .
-		\]
-	Verifique que también podría haberle obtenido a partir de la solucíon para oscilaciones sobre-amortiguadas.
-\end{enumerate}
-
-
-
-\subsection*{Oscilador armónico forzado}
-Sabemos que cualquier oscilador armónico sub-amortiguado sometido a un forzado externo transcurrido cierto tiempo la amplitud de la solución homogénea decae.
-Esto es, pasado el \emph{transitorio} solo sobrevive la solución particular que responde al forzado.
-
-Ya veremos en el curso que cualquier fuerza externa \(F(t)\) la podremos descomponer en componentes armónicas, es decir en sumas de términos de senos y cosenos.
-Por ahora estudiaremos un oscilador sub-amortiguado, como el presentado en \ref{subamortiguado}, al que se somete a un forzado perféctamente armónico \(F(t) = F_0 \cos(\Omega t)\).
-
-El movimiento resultante, pasado el \emph{transitorio}, puede representarse por $x_p(t) = A \sen(\Omega t) + B \cos(\Omega t)$, por lo que esta será nuestra solución particular.
-Los coeficientes de este seno y coseno dependerán de \(\Omega\), es decir serán funciones $A(\Omega)$ y $B(\Omega)$.
-
-\begin{enumerate}
-	\item Proponga la solución particular: 
-	Obtenga expresiones para $A(\Omega)$ y $B(\Omega)$.
-	\item A partir Grafique $A(\Omega)$ y $B(\Omega)$.
- \item Considere que $F(t)$ tiene la forma $F(t)=F_{0}\cos\left(\Omega t\right)$ (discuta si se pierde generalidad al suponer que la fuerza externa tiene esa forma) y proponga la siguiente solución particular: $x_{p}(t)=A\sen\left(\Omega t\right)+B\cos\left(\Omega t\right)$.
-	\item Grafique cualitativamente la posición de la masa en función del tiempo. 
-	\item Calcule la potencia media que se consume en el estado estacionario y la potencia media de pérdida por fricción.
-	Verifique la igualdad de ambas potencias. 
- \item Verifique que si $x_1(t)$ es solución de la ecuación diferencial cuando la fuerza externa es $F_1(t)$ y $x_2(t)$ lo es cuando la fuerza externa es $F_2(t)$, entonces $x(t)=x_1(t)+x_2(t)$ será solución de la ecuación diferencial cuando la fuerza externa sea $F(t)=F_1(t)+F_2(t)$ si y sólo si las condiciones iniciales son la suma de las condiciones iniciales de los dos casos. 
-	\item Proponga ahora como solución particular la solución compleja $x_p(t)=A \mathrm{e}^{-i \omega t}$ y demuestre que $\Re (A)=A_\text{elástico}$ y que $\Im (A)= A_\mathrm{absorbente}$.
-	¿Por qué es así?
-\end{enumerate}
-
-
-
-%\item Sea un oscilador armónico con una frecuencia de oscilación \(\nu_0= \SI{10}{\hertz}\) y con un tiempo de decaimiento muy largo.
-%Si este oscilador es alimentado con una fuerza armónicamente oscilante y con una frecuencia de \SI{10}{\hertz}, adquirirá una gran amplitud, es decir, ``resonará'' en la frecuencia de excitación.
-%Ninguna otra fuerza motriz oscilante en forma armónica producirá una gran amplitud (una resonancia). 
-%\begin{enumerate}
-%	\item Justifique el enunciado anterior. 
-%	\item Luego suponga que el oscilador está sujeto a una fuerza que es una pulsación cuadrada repetida periódicamente y cuya duración es \SI{0.01}{\second} repetida una vez por segundo.
-%	\item ¿``Resonará'' el oscilador armónico (adquirirá una gran amplitud) bajo la influencia de esta fuerza motriz?
-%	\item Suponga que la fuerza motriz es la misma pulsación cuadrada (de ancho \SI{0.01}{\second}) pero repetida dos veces por segundo.
-%	¿Resonará el oscilador?
-%	Responder a la misma pregunta para velocidades de repetición de \SI{3}{\second} a \SI{9}{\second}.
-%\end{enumerate}
+\input{osciladorForzado}
 
 
 \end{enumerate}

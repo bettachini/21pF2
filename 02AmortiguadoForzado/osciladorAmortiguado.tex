@@ -1,0 +1,45 @@
+\subsection*{Oscilador armónico amortiguado}
+
+\item Una pesa de masa $m$ está sujeta a un resorte de constante elástica $k$, por lo que la frecuencia natural de oscilación es $\omega_0 = \sqrt{ \frac{k}{m} }$.
+Actúa en este sistema un amortiguador que provee una amortiguación lineal con la velocidad de constante de amortiguamiento \(c\) que por unidad de masa es $\Gamma= c/m$.
+	\begin{enumerate}
+	\item Proponga la siguiente solución homogénea: $x_h(t) = C\mathrm{e}^{-t/2\tau}\cos(\omega_1 t + \theta )$ y halle los valores de $\tau$ y de $\omega_1$.
+	¿De qué depende los valores de $C$ y $\theta$?
+	¿Porqué no es lícito imponer las condiciones iniciales a la solución homogénea?
+	\item Repase las condiciones de \(\Gamma\) y \(\omega_0\) en que se obtienen soluciones:
+	\begin{itemize}
+		\item sub-amortiguadas,
+		\item críticamente amortiguadas, y
+		\item sobre-amortiguadas,
+	\end{itemize} \label{subamortiguado}
+	graficando \(x(t)\) para distintos valores de estos parámetros.
+	\item Verifique que la solución general para el oscilador libre \emph{sobre-amortiguado}
+	\[
+		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cosh \left( |\omega| t \right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \senh \left( |\omega| t \right) }{ |\omega| } \right\}, 
+	\]
+	puede obtenerse a partir de esta para el \emph{sub-amortiguado}
+	\[
+		x(t) = \operatorname{e}^{-\Gamma t/2} \left\{ x(0) \cos \left( \omega t \right) + \left[ \dot{x}(0) + \frac{1}{2} \Gamma x(0) \right] \frac{ \sen \left( \omega t \right)}{ \omega } \right\}, 
+	\]
+	donde \(
+		\omega = \pm i |\omega|
+	\), \(
+		|\omega| = \sqrt{\frac{1}{4}\Gamma^{2}-\omega_{0}^{2}}.
+	\)
+	Aproveche las identidades $\cos( i x ) = \cosh(x)$ y $\sen( i x ) = i \senh(x)$.
+	\item Para la condición inicial \(x(0)= x_0\) que parte del reposo, es decir \(\dot{x}(0) = 0\), escriba las expresiones de la trayectoria \(x(t)\) y calcule la energía en \(x(0)\). 
+	\item A partir de la solución general para el \emph{sub-amortiguado}, muestre que la solución para el \emph{amortiguamiento crítico} es
+	\[
+		x(t) = \operatorname{e}^{- \Gamma t / 2} \left\{ x(0) + \left[ \dot{x} (0) + \frac{1}{2} \Gamma x(0) \right] t \right\}.
+		\]
+	Verifique que también podría haberle obtenido a partir de la solucíon para oscilaciones \emph{sobre-amortiguadas}.
+\end{enumerate}
+
+
+\item (*) Si \(\Psi_1\) y \(\Psi_2\) son soluciones de la ecuación del oscilador armónico libre la combinación lineal \(\Psi = A \Psi_1 + B \Psi_2\) también lo es.
+\begin{enumerate}
+	\item Verifique que esto tambiénn es valido si actua una fuerza disipativa proporcional a la velocidad.
+	\item ¿Vale si es un rozamiento constante?
+\end{enumerate}
+
+\item (*) Para un péndulo con fuerza de disipación proporcional a la velocidad calcule el trabajo que realiza la fuerza de rozamiento y compárelo con la pérdida de energía.
