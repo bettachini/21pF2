@@ -77,34 +77,6 @@ Obtenga las frecuencias y los modos transversales del sistema.
 
 
 
-
-\subsection*{Sistemas forzados}
-\item Considere el sistema de dos péndulos acoplados del problema \ref{pendacop}, tal que uno de ellos es impulsado por una fuerza $F= F_0 \cos(\Omega t)$.  
-\begin{enumerate}
-	\item Escriba las ecuaciones de movimiento del sistema con amortiguamiento y forzado y desacople las ecuaciones utilizando las coordenadas normales del sistema.
-	\item Resuelva el sistema forzado para las coordenadas normales y luego escriba la solución más general posible para las coordenadas de las partículas a y b.
-	\item Estudie el caso estacionario, observe cuando las partículas están en fase o contrafase.
-	\item Muestre que considerando $m_a= m_b= m$ y despreciando el amortiguamiento se obtienen las siguientes expresiones.
-		\begin{align}
-			\Psi_a &\approx \frac{F_0}{2m} \cos(\Omega t) \left[ \frac{1}{\omega_1^2 - \Omega^2 } + \frac{1}{\omega_2^2 -\Omega^2} \right] \notag \\
-			\Psi_b &\approx \frac{F_0}{2m} \cos(\Omega t) \left[ \frac{1}{\omega_1^2 - \Omega^2 } - \frac{1}{\omega_2^2 -\Omega^2} \right] \notag \\
-			\frac{\Psi_b}{\Psi_a} &\approx \frac{\omega_2^2 - \omega_1^2}{\omega_2^2 + \omega_1^2 - 2 \Omega^2} \notag
-		\end{align}
-	donde $\omega_{1}$ es la menor de las frecuencias modales, $\omega_{2}$ es la mayor y $\Omega$ es la frecuencia de excitación.
-	\item (*) Grafique $\frac{\Psi_b}{\Psi_a}$, ¿qué representa esta relación?
-	Indique cuándo hay una transferencia efectiva de movimiento y cuándo no.
-\end{enumerate}
-
-
-\item Considere el sistema del problema \ref{2masitas}, pero en este caso en considere las oscilaciones longitudinales.
-\begin{enumerate}
-    \item Halle la solución estacionaria para el caso forzado en el cual se aplica sobre la masa de la izquierda una fuerza oscilante $F(t)= F_0 cos(\Omega t)$.
-		¿Qué resonancias espera ver si realiza un barrido de frecuencias?
-		\item (*) Repita el punto anterior, teniendo en cuenta además una fuerza de disipación proporcional a la velocidad
-		\item (*) Repita el problema pero considerando las oscilaciones transversales del sistema
-\end{enumerate}
-
-
 \end{enumerate}
 
 \end{document}
