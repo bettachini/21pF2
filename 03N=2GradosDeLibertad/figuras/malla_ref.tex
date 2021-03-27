@@ -1,0 +1,84 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,snakes}
+
+\begin{document}
+
+\begin{tabular}{l}
+
+\begin{tikzpicture}
+
+\coordinate (A) at (7    , 7);
+\coordinate (B) at (11.5 , 5.5);
+
+\draw[very thick](0,0)rectangle(15,9);
+
+\foreach \x in {5,10} 
+	\draw[thin, dotted](\x,0)--(\x,9);
+\draw[thin, dotted](0,4.5)--(15,4.5);
+
+\draw[snake=zigzag](5  , 0)   -- (A);
+\draw[snake=zigzag](5  , 9)   -- (A);
+\draw[snake=zigzag](10 , 0)   -- (B);
+\draw[snake=zigzag](10 , 9)   -- (B);
+\draw[snake=zigzag](0  , 4.5) -- (A);
+\draw[snake=zigzag](15 , 4.5) -- (B);
+\draw[snake=zigzag](A)        -- (B);
+
+\fill(A)node{\color{white}\LARGE 1} circle (0.5); 
+\fill(B)node{\color{white}\LARGE 2}circle (0.5);
+
+\end{tikzpicture}
+
+\\
+
+\begin{tikzpicture}
+
+\coordinate (A) at (7    , 7);
+\coordinate (B) at (11.5 , 5.5);
+
+\draw[very thick](0,0)rectangle(15,9);
+
+\foreach \x in {5,10} 
+	\draw[thin, dotted](\x,0)--(\x,9);
+\draw[thin, dotted](0,4.5)--(15,4.5);
+
+\draw[thick,<->] (15.5,0)--node[anchor=west]{\large $\frac{L}{2}$}(15.5,4.5);
+\draw[thick,<->] (15.5,4.5)--node[anchor=west]{\large $\frac{L}{2}$}(15.5,9);
+\draw[thick,<->] (0,-0.5)--node[anchor=north]{\large $\frac{D}{3}$}(5,-0.5);
+\draw[thick,<->] (5,-0.5)--node[anchor=north]{\large $\frac{D}{3}$}(10,-0.5);
+\draw[thick,<->] (10,-0.5)--node[anchor=north]{\large $\frac{D}{3}$}(15,-0.5);
+
+\draw[dotted](A)--(A|-B);
+\draw[dotted](A|-B)--(B);
+
+\draw(5  , 0)   -- node[anchor=north west]{\large ${L}_{E}$}(A);
+\draw(5  , 9)   -- node[anchor=north east]{\large ${L}_{D}$}(A);
+\draw(10 , 0)   -- node[anchor=north west]{\large ${L}_{G}$}(B);
+\draw(10 , 9)   -- node[anchor=south west]{\large ${L}_{F}$}(B);
+\draw(0  , 4.5) -- node[anchor=north west]{\large ${L}_{A}$}(A);
+\draw(15 , 4.5) -- node[anchor=south west]{\large ${L}_{C}$}(B);
+\draw(A)        -- node[anchor=south west]{\large ${L}_{B}$}(B);
+
+\draw[thick,->](5 ,4.5)--(A|-0,4.5)node[anchor=west]{\large ${x}_{1}$};
+\draw[thick,->](10,4.5)--(B|-0,4.5)node[anchor=west]{\large ${x}_{2}$};
+\draw[thick,->](5 ,4.5)--(5 ,0|-A) node[anchor=south]{\large ${y}_{1}$};
+\draw[thick,->](10,4.5)--(10,0|-B) node[anchor=south]{\large ${y}_{2}$};
+
+\draw[dotted](5,8)node[anchor=east]{\large $\delta$}arc(-90:-45:1);
+\draw[dotted](1,4.5)node[anchor=north]{\large $\alpha$}arc(0:20:1);
+\draw[dotted](5,1)node[anchor=east]{\large $\epsilon$}arc(90:77:1);
+\draw[dotted](10,8)node[anchor=east]{\large $\zeta$}arc(-90:-67:1);
+\draw[dotted](10,1)node[anchor=east]{\large $\eta$}arc(90:75:1);
+\draw[dotted](14,4.5)node[anchor=north]{\large $\gamma$}arc(180:166:1);
+\draw[dotted](7,6)node[anchor=south west]{\large $\beta$}arc(-90:-22:1);
+
+\fill(A)node{\color{white}\LARGE 1} circle (0.5); 
+\fill(B)node{\color{white}\LARGE 2}circle (0.5);
+
+\end{tikzpicture}
+
+\end{tabular}
+
+\end{document}
