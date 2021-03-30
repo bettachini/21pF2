@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+
+
+\coordinate (A) at (-2.5,0);
+\coordinate (B) at (2.5,0);
+
+\draw[thick](-2.5,6)--(A);
+\draw[thick](2.5,6) --(B);
+% \draw[snake=zigzag,thick](A)--node[anchor=south]{\large {$k$}}(B);
+\draw[decoration={aspect=0.7, segment length=5, amplitude=3, coil},decorate](A) -- node[anchor=south]{$k$}(B);
+
+\draw[-LaTeX,thick](-4,4)--node[anchor=west]{\Large $\vec{g}$}(-4,2);
+
+\dimline[extension start length=-0.25, extension end length=-0.25]{(-2.5,-1.3)}{(2.5,-1.3)}{\(l_o\)}; % cota resorte izq 2 
+
+\dimline[extension start length=-0.25, extension end length=-0.25]{(3.5,0)}{(3.5,6)}{\(l\)};
+
+\fill (A) node {\color{white} $m_a$} circle(0.7);
+\fill (B) node {\color{white} $m_b$} circle(0.7);
+
+\draw[-LaTeX,thick](-2.5,-3) --node[anchor=south]{$\Psi_a$}(-1,-3);
+\draw[-LaTeX,thick](2.5,-3) --node[anchor=south]{$\Psi_b$}(4,-3);
+
+% \draw[very thick](-3,6)--(3,6); % techo
+\draw [very thick] (-3,6) coordinate (screen) -- (3,6); % pared superior
+\fill [pattern = north east lines] (screen) rectangle +(6,0.25); % pared superior pattern
+
+
+\end{tikzpicture}
