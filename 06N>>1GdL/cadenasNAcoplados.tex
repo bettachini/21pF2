@@ -2,27 +2,31 @@
 
 
 \item \label{anterior}
-\begin{minipage}[t][1cm]{0.45\textwidth}
+\begin{minipage}[t][1.4cm]{0.45\textwidth}
 Enlazadas por resortes de coeficiente de dureza $k$ y longitud natural $l_0$ unas $N$ partículas de masa $m$ en reposo están equiespaciadas en $a$.
 \end{minipage}
-\begin{minipage}[c][1.5cm][t]{0.5\textwidth}
+\begin{minipage}[c][1.4cm][t]{0.5\textwidth}
   \includegraphics[width=\textwidth]{ej1-11}
 \end{minipage}
 \begin{enumerate}
 	\item Escriba la ecuación de movimiento transversal para la partícula enésima usando la aproximación de ángulos pequeños.
-	\item Proponga una solución de la forma:
+	\item Se propone una solución de la forma:
 	\[
 		\Psi_{n}^{(p)}(t)=A^{(p)}\cos\left(nk^{(p)}a+\alpha^{(p)}\right)\cos\left(\omega^{(p)}t+\phi^{(p)}\right)
 	\]
-	Halle la relación de dispersión y grafíquela.
+	Con ella halle la relación de dispersión.
 	¿Depende esta relación de las condiciones de contorno?
-	¿Cuánto vale la frecuencia más baja?
-	¿Qué representa dicho modo? 
 	\item \label{pi} En la figura se muestra el caso de extremos fijos en que una virtual partícula $n=0$ estaría en la pared izquierda y una $n= N+1$ en la derecha.
-	Obtenga las frecuencias correspondientes a los modos normales de oscilación transversal para este y escriba la solución general para la partícula enésima. 
-	\item \label{pa} (*) Ídem. anterior, pero con ambos extremos están libres (atención: ¿cómo sería un ``extremo libre'' en esta configuración?).
+	Escriba la solución general para la partícula enésima.
+	¿Cuánto vale la frecuencia más baja?
+	Haga un dibujo cualitativo del movimiento en dicho modo.
+	\item \label{pa} Ídem. anterior, pero con ambos extremos están libres.
+	Tal condición de contorno, a diferencia de la fija, no ejerce ninguna fuerza.
+	Esto implica que la longitud de los resortes en los extremos es siempre \(a\).
+	Puede modelizarse esto imponiento que \(\Psi_{n=0} = \Psi_{n=1}\) y \(\Psi_{n = N} = \Psi_{n = N+1}\).  
 	\item \label{pu} (*) Ídem. anterior, pero con el extremo izquierdo libre y el derecho fijo a la pared. 
 	\item (*) Particularice los resultados de \ref{pi}, \ref{pa} y \ref{pu} para el caso en que \(N = 3\).
+	\item (*) Grafique cualitativamente para \(N=9\) la relación de dispersión, es decir, \(\omega^{(p)} \) en función de \(k^{(p) } \).
 \end{enumerate}
 
 
@@ -32,6 +36,10 @@ En el sistema de la figura hay \(N\) partículas de masa \(m\) alineadas a una d
 Las mismas están sujetas a las paredes mediante resortes de constante \(k\) y longitud natural \(l_0\).
 A su vez, están vinculadas mediante resortes de constante también del mismo \(k\) y longitud natural \(l_0 < a\).
 Hay movimiento sólo en la dirección longitudinal a las partículas.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{g-008}
+\end{figure}
 \begin{enumerate}
 	\item Escriba la ecuación de movimiento para la partícula énésima.
 	Indique todas las aproximaciones que realiza.
@@ -42,11 +50,6 @@ Hay movimiento sólo en la dirección longitudinal a las partículas.
 	\item (*) Particularice para el caso \(N = 2\) y compare con el resultado que obtiene resolviendo el problema ``matricialmente''.
 	Esquematice los modos normales de oscilación.	
 \end{enumerate}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\textwidth]{g-008}
-\end{figure}
-
 
 
 \item
