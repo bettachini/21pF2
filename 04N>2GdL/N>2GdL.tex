@@ -2,14 +2,18 @@
 
 
 \item
-\begin{minipage}[t][1.2cm]{0.75\textwidth}
+\begin{minipage}[t][1.8cm]{0.65\textwidth}
 \textbf{Molécula triatómica}
 Se esquematiza en la figura una molécula triatómica simétrica.
 Entre dos átomos de masa $m$ hay uno de masa $M = 2 m$.
-Se modelan los enlaces bajo el modelo de elasticidad de Hook con constante $k$ y longitud natural $l_0$.
+Se modelan los enlaces bajo el modelo de elasticidad de Hooke con constante $k$ y longitud natural $\ell_0$.
 \end{minipage}
-\begin{minipage}[c][1cm][t]{0.2\textwidth}
-  \includegraphics[width=\textwidth]{ej1-9}
+\begin{minipage}[c][0cm][t]{0.7\textwidth}
+%   \includegraphics[width=\textwidth]{ej1-9}
+	\begingroup
+		% \tikzset{every picture/.style={scale=0.4}}%
+		\input{\detokenize{figuras/ownCO2_tikz}}
+	\endgroup
 \end{minipage}
 \begin{enumerate}
 	\item Encuentre las ecuaciones para la dinámica de cada átomo en la dirección longitudinal a la molécula, \(\hat{x}\).
@@ -23,25 +27,30 @@ Se modelan los enlaces bajo el modelo de elasticidad de Hook con constante $k$ y
 
 
 \item
-\begin{minipage}[t][2.2cm]{0.5\textwidth}
+% \begin{minipage}[t][2.2cm]{0.5\textwidth}
 Analice las oscilaciones transversales del problema anterior.
 Para su mejor comprensión puede imaginarlo como el esquema de la figura, en el cual las partículas de los extremos pueden subir/bajar pero solidarios a la barra enhebrada a los vástagos laterales. 
-\end{minipage}
-\begin{minipage}[c][0cm][t]{0.45\textwidth}
-  \includegraphics[width=\textwidth]{\detokenize{moléculaT}}
-\end{minipage}
+% \end{minipage}
+% \begin{minipage}[c][0cm][t]{0.45\textwidth}
+%   \includegraphics[width=\textwidth]{\detokenize{moléculaT}}
+% \end{minipage}
+\begin{figure}[h]
+	\centering
+	\input{figuras/tikzn2gl_2}
+\end{figure} 
 \begin{enumerate}
 	\item Encuentre las ecuaciones de movimiento de las partículas.
-	¿Qué diferencia hay en el caso con resortes \emph{slinky} y con $l_0 \neq 0$ en las ecuaciones de movimiento bajo la aproximación de pequeñas oscilaciones? 
+	¿Qué diferencia hay en el caso con resortes \emph{slinky} y con $\ell_0 \neq 0$ en las ecuaciones de movimiento bajo la aproximación de pequeñas oscilaciones? 
 	\item Halle las frecuencias de los modos normales.
 	\item Dibuje la configuración correspondiente a cada modo normal.
 Determine los desplazamientos de cada partícula como función del tiempo (solución más general posible para cada partícula).
 	\item ¿Qué condiciones iniciales que permiten excitar sólo el segundo modo?
 	\item Si se fuerza la partícula del centro con frecuencias incrementalmente mayores, ¿qué modos se van observando?
-	\item ¿Cómo se modifican los resultados anteriores si el extremo de la derecha se fija a la pared como se indica en la figura a continuación?.
+	\item ¿Cómo se modifican los resultados anteriores si la párticula en la derecha se enlaza, no un vástago sino, a una pared a través de un resorte igual a los demás como muestra la siguiente figura?
 	\begin{figure}[h]
 		\centering
-		\includegraphics[clip,scale=0.5]{\detokenize{moléculaT_fijo_libre}}
+		\input{figuras/tikzn2gl_2_f}
+		% \includegraphics[clip,scale=0.5]{\detokenize{moléculaT_fijo_libre}}
 	\end{figure} 
 \end{enumerate}
 
