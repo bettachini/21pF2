@@ -1,0 +1,23 @@
+# Book settings
+title: Física 2
+author: Víctor A. Bettachini
+copyright: "2021" 
+logo: '00Introducción/figuras/logoDF.png'
+
+only_build_toc_files: true
+
+# Information about where the book exists on the web
+repository:
+  url                       : https://github.com/bettachini/21pF2
+  branch                    : master  # Which branch of the repository should be used when creating links
+
+html:
+  use_repository_button: true
+
+# Launch button settings
+launch_buttons:
+  notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  colab_url                 : http://colab.research.google.com # The URL of Google Colab (https://colab.research.google.com)

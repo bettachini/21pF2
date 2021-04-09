@@ -1,0 +1,5 @@
+- file: index
+
+- part: N>>1 Grados de libertad
+  chapters:
+  - file: 06N>>1GdLclase_1/cadenaPeriódica
