@@ -2,10 +2,11 @@
 
 \item A través de dibujos verifique que:
 \begin{enumerate}
-	\item Un rayo que incide sobre una lámina de caras paralelas, inmersa en un medio único, no se desvía al atravesarla. Calcule el desplazamiento lateral de dicho rayo, en términos de su espesor $d$ y de su índice de refracción $n$.
+	\item Un rayo que incide sobre una lámina de caras paralelas, inmersa en un medio único, no se desvía al atravesarla.
+	Calcule el desplazamiento lateral en función del espesor $d$ e índice de refracción $n$.
 	\item El rayo que se refleja en la primera cara y el que emerge luego de reflejarse en la segunda son paralelos.
 \end{enumerate}
-Si el medio exterior es único, ¿existe algún ángulo de incidencia tal que produzca reflexión total en la cara inferior?
+Si el medio exterior es único, ¿existe un ángulo de incidencia que produzca reflexión total en la cara inferior?
 
 
 
@@ -25,19 +26,18 @@ Un rayo incide con ángulo $\phi$ sobre la superficie horizontal de un cubo de m
 
 
 \item
-La fibra óptica es un medio empleado habitualmente para la transmisión de redes de datos, que se usa en telecomunicaciones.
-Básicamente consiste en una hebra muy fina de cierto vidrio (cristal de silicio o materiales plásticos adecuados), de alto índice de refracción (núcleo), cuyo diámetro no excede los \SI{125}{\micro\metre}, que se recubre con un material de índice de refracción menor que el del propio núcleo (recubrimiento) con el fin de retener la luz dentro de él, y, que a su vez se protege con una envoltura exterior de material plástico muy flexible.
-El funcionamiento de estas fibras está basado en el fenómeno de reflexión total sobre los rayos que, ingresando en un extremo, se reflejan sobre las paredes de separación entre el núcleo y el recubrimiento quedando así encapsulados hasta salir por el otro extremo, independientemente que la fibra siga o no una línea recta.
+La fibra óptica es en esencia una hebra muy fina de un material de alto índice de refracción, e.g. cristal de silicio o plástico transparente.
+Un revestimiento (\emph{cladding}) de menor índice logra, por reflexión total, que la luz que ingresa por un extremo al núcleo (\emph{core}) solo pueda salir por el otro.
 \begin{figure}[ht]
 	\centering{}\includegraphics[width=0.75\textwidth]{fibra}
 \end{figure}
 \begin{enumerate}
-	\item Demuestre que el ángulo del cono de aceptación \(\alpha_A\) que forman todos los rayos que ingresando en la fibra, como está indicado en la figura, son reflejados en la superficie de separación entre el núcleo y su recubrimiento es
+	\item Verifique que sufren reflexión total los rayos dentro del ángulo \(\alpha_A\) del cono de aceptación. 
 	\[
 		\sen{(\alpha_A)} = \frac{n_1}{n_o} \sqrt{1- \left( \frac{n_2}{n_1} \right)^2 }
 	\]
-	siendo \(n_0\) , \(n_1\) y \(n_2\) los índices de refracción que corresponden al medio exterior, al núcleo de la fibra óptica y a su recubrimiento, respectivamente.
-	\item Como el cono de aceptación depende del índice que rodea a la fibra en el extremo de entrada, suele emplearse una magnitud denominada apertura numérica y que se define como
+	siendo \(n_0\), \(n_1\) y \(n_2\) índices de refracción del medio exterior, núcleo y recubrimiento.
+	\item Como el cono de aceptación depende del índice que rodea a la fibra en el extremo de entrada, suele emplearse la magnitud denominada apertura numérica que se define como
 	\[
 		\text{AN} = n \sen{(\alpha_A)}
 	\]
