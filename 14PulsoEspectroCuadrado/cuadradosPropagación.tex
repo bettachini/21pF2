@@ -1,21 +1,4 @@
-\documentclass[11pt,spanish,a4paper]{article}
-% Versión 1.er cuat 2021 Víctor Bettachini < bettachini@df.uba.ar >
-
-\input{../introFCEyN}
-
-\begin{document}
-\begin{center}
-\textbf{Física 2} (Físicos) \hfill \textcopyright {\tt DF, FCEyN, UBA}\\
-	\textsc{\LARGE Propagación de pulsos y espectros cuadrados}
-\end{center}
-
-Los ejercicios con (*) entrañan una dificultad adicional. Son para investigar después de resolver los demás.
-
-
-
-
-\begin{enumerate}
-
+\section*{Propagación de pulsos y espectros cuadrados}
 
 \item
 \textbf{Espectro cuadrado}.\\ 
@@ -54,11 +37,14 @@ Los ejercicios con (*) entrañan una dificultad adicional. Son para investigar d
 	\end{minipage}
 	\begin{minipage}[c][0.5cm][t]{0.5\textwidth}
 		\begin{tikzpicture}
-			\tikzmath{
-			\Dt= 1;
-			\ttau= 2;
-			\haute= 1;
-			}
+%			\tikzmath{
+%			\Dt= 1;
+%			\ttau= 2;
+%			\haute= 1;
+%			}
+			\def \Dt{1};
+			\def \ttau{2};
+			\def \haute{1};
 			\draw [-Latex] (0,0) -- (8,0) node [anchor=north] {\( t \)};	% eje x
 			\draw [Latex-](0,2*\haute) node [anchor=west] {\( \phi(t) \)} -- (0,0) node [anchor=north] {\(0\)};	% eje y
 			\draw [thin, dashed] (0,\haute) node [anchor=east] {\( \phi_0 \)} -- (0,\haute);
@@ -86,9 +72,3 @@ Los ejercicios con (*) entrañan una dificultad adicional. Son para investigar d
 	% \item ¿Por qué $\Delta t \Delta \nu \approx 1$ si, en principio, podría $\Delta t \Delta \nu \gg 1$?
 	% La misma pregunta para $\delta \nu$ y $T_\text{largo}$.
 \end{enumerate}
-
-
-
-\end{enumerate}
-
-\end{document}
