@@ -53,7 +53,9 @@ Este causa que sea parcialmente reflejada viajando en la dirección de las \(x\)
 \begin{minipage}[c][-0.5cm][t]{0.34\textwidth}
 	\begin{tikzpicture}[scale= 1]
 		\draw [thick, dashed] (-3,0) -- (-2,0);
-		\draw [thick] (-2,0) -- (2,0); % node [midway, above] {\(\lambda_{m2} \)};
+		\draw [thick] (-2,0) -- (0,0) node [near start, above] {\(\lambda_m \)};
+		% \draw [thick] (-2,0) -- (2,0); % node [midway, above] {\(\lambda_{m2} \)};
+		\draw [thick] (0,0) -- (2,0) node [near end, above] {\(\lambda_m \)};
 		\draw [thick,dashed] (2,0) -- (3,0);
 		\shade [ball color=black!80] (0,0) circle(0.25) node [] {\color{white} $M$};
 	\end{tikzpicture}
