@@ -1,7 +1,7 @@
 \section*{Oscilador libre de un único grado de libertad}
 
 \item 
-\begin{minipage}[t][6.2cm]{0.7\textwidth}
+\begin{minipage}[t][6.2cm]{0.75\textwidth}
 \textbf{Péndulo ideal}\\
 Un péndulo de longitud $l$ está sometido a la aceleración gravitatoria \(\vec{g}\).
 \begin{enumerate}
@@ -15,18 +15,15 @@ Un péndulo de longitud $l$ está sometido a la aceleración gravitatoria \(\vec
 \end{minipage}
 \begin{minipage}[c][0cm][t]{0.25\textwidth}
 	% \includegraphics[width=\textwidth]{penduloHorizontal}
-	\begin{tikzpicture}[scale= 1.2]
-	% \begin{tikzpicture}
-  	\draw [arrows=- triangle 45] (-1,2) -> (-1,1) node [above=15, right=2] {\(\vec{g}\)}; % g vertical
-		\draw [ultra thick] (-1.5,3) -- (2.5,3);
-		\fill [pattern = north east lines] (-1.5,3) rectangle (2.5,3.2); % techo
-		\draw [dashed] (0,3) -- (0,0);	% vertical
+	\begin{tikzpicture}[scale= 1.0]
+	\draw [arrows=-latex] (-1,2) -> (-1,1) node [above=15, right=2] {\(\vec{g}\)}; % g vertical
+		\draw [ultra thick] (-1.5,3) -- (2,3);
+		\fill [pattern = north east lines] (-1.5,3) rectangle (2,3.2); % techo
+		\draw [dashed] (0,3) -- (0,-.25);	% vertical
 		\draw [thick] (0,3) -- +(-60:3) node[midway,above,right=2] {\(\ell\)};	% inclinada +:relativa, -60 grados, longitud 3
-		% \draw [thick] (0,3) -- +(-60:3) node[midway,above,sloped] {\(l\)};	% inclinada +:relativa, -60 grados, longitud 3
-    \fill (0,3)+(-60:3) circle [radius=0.25] node [text=white] { \( \mathrm{m} \) }; % masa izq
-    \draw [thin, arrows=- triangle 45] (0,.4) -> (1.25,.4) node [midway, above] {\( \psi \)}; % desplazamiento horizontal
-    % \draw [thin, arrows=- triangle 45] (0,.4) -> (1.25,.4) node [above=8, left=8] {\( \psi \)}; % desplazamiento horizontal
-		\draw [thin, arrows=- triangle 45] (0,0) arc [start angle=-90, end angle=-65, radius=3] node [below=12, left=8] {\( \varphi \)};
+		\shade [ball color=black!80] ($(0,3)+(-60:3)$) circle(0.25) node [] {\color{white} $m$};
+    \draw [arrows=-latex] (0,.4) -> (1.25,.4) node [midway, above] {\( \psi \)}; % desplazamiento horizontal
+		\draw [arrows=-latex] (0,0) arc [start angle=-90, end angle=-65, radius=3] node [below=12, left=8] {\( \varphi \)};
 	\end{tikzpicture}
 \end{minipage}
 
