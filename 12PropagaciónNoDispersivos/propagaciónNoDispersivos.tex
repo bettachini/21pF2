@@ -1,9 +1,10 @@
 \section*{Propagación en medios no dispersivos}
 
 
-\item
+\item \label{propagando}
 \begin{minipage}[t][2.6cm]{0.4\textwidth}
-\fussy
+\textbf{Perturbacion propagando en una cuerda no dispersiva}\\
+% \fussy
 Una perturbación se propaga en una cuerda infinita con velocidad $v$.
 Las figuras la muestran en $t =0$ y $t = \SI{4}{\second}$.
 Determine $v$ y $\psi(x,t)$.
@@ -30,7 +31,7 @@ Determine $v$ y $\psi(x,t)$.
 		\coordinate (quiebreSuperior) at ({(\t0+\Dt)/2},\haute);
 		\coordinate (quiebreSuperiorDebajo) at ({(\t0+\Dt)/2},0);
 		\draw [-Latex] (\xmin/2,0) -- (\xmax/2,0) node [anchor=north] {\(x\) [m]};	% eje x
-		\draw [Latex-](0,\ymax) node [anchor=west] {\( \psi(x,0) \)} -- (0,\ymin) node [anchor=north] {\(0\)};	% eje y
+		\draw [Latex-](0,\ymax) node [anchor=west] {\( \psi(x,0) \) [cm]} -- (0,\ymin) node [anchor=north] {\(0\)};	% eje y
 		\draw [ultra thick] (\xmin/2,0) -- (quiebreInferior) node [anchor = north] {\t0} -- (quiebreSuperior) -- (quiebreSuperiorDebajo) node [anchor = north] {\( 3 \)} -- (\xmax/2-0.15,0);	% cuerda
 		% \draw [ultra thick] (\xmin/2,0) -- (quiebreInferior) node [anchor = north] {\t0} -- (quiebreSuperior) node [anchor = south west] {\(t=0\)}-- (quiebreSuperiorDebajo) node [anchor = north] {3} -- (\xmax/2-0.15,0);	% cuerda
 		\draw [thin, dashed] (0,\haute) node [anchor=east] {\( 1 \)} -- (quiebreSuperior);
@@ -57,16 +58,20 @@ Determine $v$ y $\psi(x,t)$.
 		\coordinate (quiebreSuperior) at ({(\t0+\Dt+\Dt)/2},\haute);
 		\coordinate (quiebreSuperiorDebajo) at ({(\t0+\Dt+\Dt)/2},0);
 		\draw [-Latex] (\xmin/2,0) -- (\xmax/2,0) node [anchor=north] {\(x\) [m]};	% eje x
-		\draw [Latex-](0,\ymax) node [anchor=west] {\( \psi(x,4 s) \)} -- (0,\ymin) node [anchor=north] {\(0\)};	% eje y
+		\draw [Latex-](0,\ymax) node [anchor=west] {\( \psi(x,4 s) \) [cm]} -- (0,\ymin) node [anchor=north] {\(0\)};	% eje y
 		\draw [ultra thick] (\xmin/2,0) -- (quiebreInferior) node [anchor = north] {\( 3 \)} -- (quiebreSuperior) -- (quiebreSuperiorDebajo) node [anchor = north] {\( 5 \)} -- (\xmax/2-0.15,0);	% cuerda
 		\draw [thin, dashed] (0,\haute) node [anchor=east] {\( 1 \)} -- (quiebreSuperior);
 	\end{tikzpicture}
 \end{minipage}
-	Suponga ahora que conoce que $v = \SI{100}{\metre\over\second}$ y vé que la cuerda fue soltada desde el reposo con la deformación vista en $t=0$.
+
+
+
+\item 
+\textbf{Perturbacion inicial en una cuerda no dispersiva}\\
+Suponga que la cuerda del problema \ref{propagando} fue soltada desde el reposo con la deformación vista en $t=0$.
 \begin{enumerate}
-	\item Halle las componentes de la perturbación que se propagan a izquierda y derecha que conforman $\psi(x,t) = \psi_\text{derecha} (x - v t ) + \psi_\text{izquierda} ( x + v t )$.
-	% Dé explícitamente (en cada intervalo de interés) la expresión de $\psi(x,t)$.
-	\item Compare esta situación con la anterior.
+	\item Escriba las componentes de la perturbación que se propagan a izquierda y derecha que conforman $\psi(x,t) = \psi_\text{derecha} (x - v t ) + \psi_\text{izquierda} ( x + v t )$.
+	\item Grafique $\psi(x, t= \SI{0.25}{s})$.
 \end{enumerate}
 
 
@@ -137,17 +142,18 @@ Se conocen $\lambda_{m\,\text{izq}}$, $\lambda_{m\,\text{der}}$, $T_0$, $\Delta 
 		\def \Deltax{1};
 		\def \x0{-1};
 		\def \haute{1};
-		\def \xmin{-2.5};
-		\def \xmax{-\xmin};
+		\def \xmin{-3};
+		\def \xmax{2.5};
 		\def \ymin{0};
 		\def \ymax{2};
 		\coordinate (quiebreIzq) at ({(\x0-\Deltax/2)},0);
 		\coordinate (quiebreSuperior) at ({\x0},\haute);
 		\coordinate (quiebreDer) at ({(\x0+\Deltax/2)},0);
-		\draw [-Latex, thin] (\xmin,0) -- (\xmax,0) node [anchor=north] {\(x\) [m]};	% eje x
+		\draw [-Latex, thin] (\xmin,0) -- (\xmax+0.3,0) node [anchor=north] {\(x\) [m]};	% eje x
 		\draw [Latex-, thin](0,\ymax) node [anchor=west] {\( \psi(x,0) \)} -- (0,\ymin) node [anchor=north] {\(0\)};	% eje y
-		\draw [ultra thick] (\xmin+0.3,0) -- (quiebreIzq) -- (quiebreSuperior) -- (quiebreDer) -- (0,0);	% cuerda izq
-		\draw [ultra thick, gray] (0,0) -- ({\xmax-.3},0);	% cuerda der
+		\draw [ultra thick] (\xmin+0.3,0) -- (quiebreIzq) node [near start, above] {\(\lambda_{m\,\mathrm{izq}}\)} -- (quiebreSuperior) -- (quiebreDer) -- (0,0) ; %	% cuerda izq
+		% \draw [ultra thick] (\xmin+0.3,0) -- (quiebreIzq) -- (quiebreSuperior) -- (quiebreDer) -- (0,0) node [near start, above] {\(\lambda_{m\,\mathrm{izq}}\)}; %	% cuerda izq
+		\draw [ultra thick, gray] (0,0) -- ({\xmax-.3},0) node [near end, above] {\(\lambda_{m\,\mathrm{der}}\)};	% cuerda der
 		\draw [thin, dashed] (0,\haute) node [anchor = west] {\( h \)} -- (quiebreSuperior);
 		\dimline [label style= {above=0}, extension start length=-0.6, extension end length=-0.6]{(-1.5,-.6)}{(-0.5,-.6)}{\( \Delta x \)};
 	\end{tikzpicture}
