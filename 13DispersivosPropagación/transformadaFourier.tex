@@ -1,7 +1,7 @@
 \section*{Transformada de Fourier}
 
-\item Se quiere investigar la relación entre el ancho de un paquete y el desfasaje de las frecuencias que lo componen.
-Ayuda: \( \int\limits_{-\infty}^{\infty} \operatorname{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha} } \), \( \int\limits_{-\infty}^{\infty} \operatorname{e}^{-(x+ a)^2} \dd{x} = \sqrt{\pi}\).
+\item 
+\textbf{Relación entre ancho de un paquete y el desfasaje de las frecuencias que lo componen}
 \begin{enumerate}
 	\item Tome el siguiente pulso con un espectro Gaussiano de ancho $\Delta k$ centrado en $k_0$ (note que las frecuencias están en fase):
 $$
@@ -9,6 +9,7 @@ F(k)=A \operatorname{e}^{-\frac{ ( k - k_0 )^2 }{ 4 \Delta k^2 } }.
 $$
 Calcule $f(x) = \mathcal{F}^{-1}[F(k)]$ y vea que tiene una envolvente Gaussiana que modula una portadora de frecuencia $k_{0}$.
 Note que el pulso está centrado en $x=0$ y que se cumple la relación $\Delta x \Delta k = 1/2$ (el paquete Gaussiano es el de mínima incerteza).
+Ayuda: \( \int\limits_{-\infty}^{\infty} \operatorname{e}^{-\alpha x^2} \dd{x} = \sqrt{\frac{\pi}{\alpha} } \), \( \int\limits_{-\infty}^{\infty} \operatorname{e}^{-(x+ a)^2} \dd{x} = \sqrt{\pi}\).
 	\item Ahora desfase las distintas frecuencias en forma lineal, tal que:
 $$
 F(k)=A \operatorname{e}^{ -\frac{ ( k - k_0 )^2 }{ 4 \Delta k^2 } } \operatorname{e}^{ i \alpha (k - k_0 ) }.
@@ -27,7 +28,9 @@ Derive $\Delta x$ con respecto a $\Delta k$ de la expresión anterior y analice 
 \end{enumerate}
 
 
-\item (*) Muestre que si $\phi(t) \in \mathcal{R}$ y $\psi(\omega)= \mathcal{F} \left[ \phi (t) \right]$ es su transformada de Fourier, esta última cumple que \( \overline{\psi}(\omega) = \psi(- \omega) \), es decir, que para obtener su conjugada basta con invertir el signo de $\omega$.
-	Aproveche esto para escribir a $\phi(t)$ como superposición de senos y cosenos.
+
+\item \textbf{Conjugación de la transformada de Fourier}\\
+Muestre que si $\phi(t) \in \mathcal{R}$ y $\psi(\omega)= \mathcal{F} \left[ \phi (t) \right]$ es su transformada de Fourier, esta última cumple que \( \overline{\psi}(\omega) = \psi(- \omega) \), es decir, que para obtener su conjugada de la transformada basta con invertir el signo de $\omega$.
+Aproveche esto para escribir $\phi(t)$ como superposición de senos y cosenos.
 	% \item Muestre que su transformada de Fourier $\psi(\omega)$ cumple $\psi(\omega)=\psi(-\omega)$.
 	% cumple $\psi(\omega) = \psi^*(-\omega)$ ($\psi(\omega) = |\psi(-\omega)|$).
