@@ -1,4 +1,4 @@
-\section*{Pulsos y espectros cuadrados}
+% \section*{Pulsos y espectros cuadrados}
 
 \item
 \textbf{Espectro cuadrado}\\ 
@@ -20,7 +20,7 @@
 
 
 
-\item \textbf{Tren de pulsos cuadrados}\\
+\item \textbf{Tren de pulsos cuadrados}
 \begin{enumerate}
 	\item Muestre que $\mathcal{F}$ es lineal, por tanto
 	$
@@ -73,3 +73,50 @@
 	% \item ¿Por qué $\Delta t \Delta \nu \approx 1$ si, en principio, podría $\Delta t \Delta \nu \gg 1$?
 	% La misma pregunta para $\delta \nu$ y $T_\text{largo}$.
 \end{enumerate}
+
+
+
+\item 
+\textbf{Interfaz entre medios no dispersivos}\\
+\begin{minipage}[t][2.1cm]{0.6\textwidth}
+Dos cuerdas semi-infinitas de distinta densidad lineal de masa, $\lambda_{m\,\text{izq}}$ y $\lambda_{m\,\text{der}}$, están unidas en un punto y sometidas a una tensión $T_0$.
+Sobre la primera se propaga hacia la derecha el pulso que muestra la figura.
+Se conocen $\lambda_{m\,\text{izq}}$, $\lambda_{m\,\text{der}}$, $T_0$, $\Delta x$ y $h$, y se considera que los medios son no dispersivos.
+\end{minipage}
+\begin{minipage}[c][0.4cm][t]{0.34\textwidth}
+	\begin{tikzpicture}
+%		\tikzmath{
+%			\Deltax = 1;
+%			\x0 = -1;
+%			\haute = 1;
+%			\xmin = -2.5;
+%			\xmax = -\xmin;
+%			\ymin = 0;
+%			\ymax = 2;
+%		}
+		\def \Deltax{1};
+		\def \x0{-1};
+		\def \haute{1};
+		\def \xmin{-3};
+		\def \xmax{2.5};
+		\def \ymin{0};
+		\def \ymax{2};
+		\coordinate (quiebreIzq) at ({(\x0-\Deltax/2)},0);
+		\coordinate (quiebreSuperior) at ({\x0},\haute);
+		\coordinate (quiebreDer) at ({(\x0+\Deltax/2)},0);
+		\draw [-Latex, thin] (\xmin,0) -- (\xmax+0.3,0) node [anchor=north] {\(x\) [m]};	% eje x
+		\draw [Latex-, thin](0,\ymax) node [anchor=west] {\( \psi(x,0) \)} -- (0,\ymin) node [anchor=north] {\(0\)};	% eje y
+		\draw [ultra thick] (\xmin+0.3,0) -- (quiebreIzq) node [near start, above] {\(\lambda_{m\,\mathrm{izq}}\)} -- (quiebreSuperior) -- (quiebreDer) -- (0,0) ; %	% cuerda izq
+		% \draw [ultra thick] (\xmin+0.3,0) -- (quiebreIzq) -- (quiebreSuperior) -- (quiebreDer) -- (0,0) node [near start, above] {\(\lambda_{m\,\mathrm{izq}}\)}; %	% cuerda izq
+		\draw [ultra thick, gray] (0,0) -- ({\xmax-.3},0) node [near end, above] {\(\lambda_{m\,\mathrm{der}}\)};	% cuerda der
+		\draw [thin, dashed] (0,\haute) node [anchor = west] {\( h \)} -- (quiebreSuperior);
+		\dimline [label style= {above=0}, extension start length=-0.6, extension end length=-0.6]{(-1.5,-.6)}{(-0.5,-.6)}{\( \Delta x \)};
+	\end{tikzpicture}
+% 	\includegraphics[width=\textwidth]{ej2-20}
+\end{minipage}
+\begin{enumerate}
+	\item Hallar el desplazamiento $\psi(x,t)$.
+	\item Explique cualitativamente cómo cambian estos resultados si el medio es dispersivo.
+\end{enumerate}
+
+
