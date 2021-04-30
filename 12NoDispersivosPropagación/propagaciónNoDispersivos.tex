@@ -2,8 +2,8 @@
 
 
 \item \label{propagando}
-\begin{minipage}[t][2.6cm]{0.4\textwidth}
-\textbf{Perturbación propagando en una cuerda no dispersiva}\\
+\begin{minipage}[t][2cm]{0.4\textwidth}
+\textbf{Perturbación propagando en un sentido}\\
 % \fussy
 Una perturbación se propaga en una cuerda infinita con velocidad $v$.
 Las figuras la muestran en $t =0$ y $t = \SI{4}{\second}$.
@@ -67,7 +67,7 @@ Determine $v$ y $\psi(x,t)$.
 
 
 \item 
-\textbf{Perturbación inicial en una cuerda no dispersiva}\\
+\textbf{Perturbación inicial en una cuerda}\\
 Suponga que la cuerda del problema \ref{propagando} fue soltada desde el reposo con la deformación vista en $t=0$.
 \begin{enumerate}
 	\item Escriba las componentes de la perturbación que se propagan a izquierda y derecha que conforman $\psi(x,t) = \psi_\text{derecha} (x - v t ) + \psi_\text{izquierda} ( x + v t )$.
@@ -76,7 +76,9 @@ Suponga que la cuerda del problema \ref{propagando} fue soltada desde el reposo 
 
 
 
-\item (*) Ambos extremos de una cuerda de densidad $\mu$ están fijos sometiéndola a una tensión $T$.
+\item
+\textbf{Otra perturbación inicial en una cuerda}\\
+Ambos extremos de una cuerda de densidad $\mu$ están fijos sometiéndola a una tensión $T$.
 A $t=0$ se la suelta con $h \ll L$ desde
 $
 \psi(x,0)=\begin{cases}
@@ -88,11 +90,12 @@ h\frac{L-a-x}{L/2-a} & \mbox{si }L/2<x<L-a\\
 $
 \begin{enumerate}
 	\item Hallar $\psi(x,t)$ y demostrar que siempre es posible escribir esta solución como una superposición de una onda que se propaga hacia la derecha y una que se propaga hacia la izquierda.
-	\item Hacer un esquema cualitativo del movimiento de la cuerda para los instantes $t_n = \frac{n}{8} \frac{L}{v}$, donde $v$ es la velocidad de propagación de las ondas en la cuerda y $n$ es un número natural.
+	\item Graficar $\psi(x,t)$ en los instantes $t_n = \frac{n}{8} \frac{L}{v}$, donde $v$ es la velocidad de propagación y $n \in \mathbb{N}$.
 \end{enumerate}
 
 
 \item 
+\textbf{Perturbación inicial en un gas}\\
 \begin{minipage}[t][1.5cm]{0.7\textwidth}
 (*) En un gas, a $t=0$, se produce la perturbación sobre su densidad \(\rho\) indicada en la figura.
 Conociendo la $v_\text{sonido}$, $\rho_{1}$, $\rho_{0}$ tales que $(\rho_{1}-\rho_{0})/\rho_{0}\ll1$ y que en ese momento el gas estaba en reposo, calcule $\rho(x,t)$.
@@ -127,7 +130,9 @@ Conociendo la $v_\text{sonido}$, $\rho_{1}$, $\rho_{0}$ tales que $(\rho_{1}-\rh
 
 \subsection*{Velocidad de fase y de grupo}
 
-\item ¿Cuál de estos métodos determina la velocidad de fase y cuál la de grupo?
+\item
+\textbf{
+¿Cuál de estos métodos determina la velocidad de fase y cuál la de grupo?}
 \begin{enumerate}
 \item Golpear las manos y determinar el tiempo que transcurre entre el aplauso y el eco de un reflector ubicado a una distancia conocida.
 \item Medir la longitud de un tubo que resuena a una frecuencia conocida (y corregir por efectos de borde).
@@ -136,7 +141,10 @@ Conociendo la $v_\text{sonido}$, $\rho_{1}$, $\rho_{0}$ tales que $(\rho_{1}-\rh
 \end{enumerate}
 
 
-\item Demuestre que la relación de la velocidad de grupo $v_g$ y de fase $v_\phi$ es
+
+\item 
+\textbf{Relación de velocidad de grupo y de fase}\\
+Demuestre que
 $$
 v_g = v_\phi - \lambda \dv{v_\phi}{\lambda}.
 $$
