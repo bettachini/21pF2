@@ -1,21 +1,22 @@
 % \section*{Pulsos y espectros cuadrados}
 
 \item
-\textbf{Espectro cuadrado}\\ 
-\(\psi(\omega)\) es un \emph{espectro cuadrado}, esto es, presenta un valor constante,$\frac{1}{\Delta \omega}$, en un intervalo de frecuencias $\Delta\omega$ centrado en un $\omega_0$ y éste es nulo para cualquier otra $\omega$.
+\textbf{Espectro plano acotado}\\ 
+\(\hat{\phi }(\omega)\) en un $\Delta\omega$ centrado en un $\omega_0$ presenta una amplitud constante $\frac{1}{\Delta \omega}$. 
+En otras $\omega$ es nula.
 \begin{enumerate}
 	\item
-	Verifique que el correspondiente $\phi(t) = \mathcal{F}^{-1} \psi(\omega)$ está dado por:
+	Verifique que el correspondiente $\phi(t) = \mathcal{F}^{-1} \hat{\phi }(\omega)$ está dado por:
 	$$
 		\phi(t)
 		= \frac{1}{\sqrt{2 \pi}} \left[ \frac{ \sen{ \left( \frac{\Delta \omega}{2} t \right) } }{\frac{\Delta \omega}{2} t} \right] \operatorname{e}^{i \omega_0 t}
 		= \frac{1}{\sqrt{2 \pi}} \operatorname{senc} \left( \frac{\Delta \omega}{2} t \right) \operatorname{e}^{i \omega_0 t}.
 	$$
 	\item
-	Grafique $\psi(\omega)$ y $\left|\phi(t)\right|$.
+	Grafique $\hat{\phi }(\omega)$ y $\left|\phi(t)\right|$.
 	\item 
 	Sea $T$ un intervalo de tiempo más prolongado que la duración de cualquier experimento que pueda idear.
-	Muestre que si $\Delta\omega$ es suficientemente pequeño como para que $\Delta\omega T\ll1$, entonces durante un tiempo menor que $T$, $\phi(t)$ es una función armónica de amplitud y fase casi constantes.
+	Muestre que si $\Delta \omega$ es suficientemente pequeño como para que $\Delta \omega T \ll 1$, entonces durante un tiempo menor que $T$, $\phi(t)$ es una función armónica de amplitud y fase casi constantes.
 \end{enumerate}
 
 
@@ -24,16 +25,16 @@
 \begin{enumerate}
 	\item Muestre que $\mathcal{F}$ es lineal, por tanto
 	$
-	\mathcal{F} \left[ a f(x) + b g(x) \right] = a \mathcal{F} \left[ f(x) \right] + b \mathcal{F} \left[ g(x) \right],
+	\mathcal{F} \left( a f(x) + b g(x) \right) = a \mathcal{F} f(x) + b \mathcal{F} g(x),
 	$
 	donde $a$, $b$ son constantes.
 
 	\item
-	\begin{minipage}[t][5.5cm]{0.4\textwidth}
+	\begin{minipage}[t][5cm]{0.4\textwidth}
 	\(\phi(t)\) es una serie de pulsos cuadrados de duración \(\Delta t\) que se repiten $N$ veces con un período $\tau$ (\(\Delta t < \tau\)).
 	Si \(f(n,t)\) describe la función en cualquiera de los intervalos \( [n \tau, (n+1) \tau] \) que contiene estos pulsos de amplitud no nula $\phi_0$ en $[n\tau, n \tau + \Delta t]$ de forma que \(\phi(t)= \sum_{n=0}^N f(n,t)\) , compruebe que 
 	$$
-	\mathcal{F} \left[ \phi(t) \right] = \mathcal{F} \left[ \sum_{n=0}^N f(n,t) \right] = \sum_{n=0}^N \operatorname{e}^{ - i n \omega \tau} \mathcal{F} \left[ f(0,t) \right] .
+	\mathcal{F} \phi(t) = \mathcal{F} \left[ \sum_{n=0}^N f(n,t) \right] = \sum_{n=0}^N \operatorname{e}^{ - i n \omega \tau} \mathcal{F} f(0,t).
 	$$
 	\end{minipage}
 	\begin{minipage}[c][0.5cm][t]{0.5\textwidth}
@@ -61,10 +62,10 @@
 			\draw [thin, dashed] (\Dt+\ttau+\Dt+\ttau+\Dt,0) node [anchor=north] {\( 2\tau+ \Delta t \)} -- (\Dt+\ttau+\Dt+\ttau+\Dt,\haute);
 		\end{tikzpicture}
 	\end{minipage}
-	\item Resuelva \(\mathcal{F} \left[ f(0,t) \right]\) para obtener la expresión completa de $\psi(\nu) = \mathcal{F} \left[ \phi(t) \right]$.
+	\item Resuelva \(\mathcal{F} f(0,t)\) para obtener la expresión completa de $\hat{\phi }(\nu) = \mathcal{F} \phi(t)$.
 
-	\item El rasgo más prominente de \(\psi(\nu)\) son picos en \(\nu_p = p \nu_1 \; (p \in \mathbb{N})\) donde \(\nu_1 = \frac{1}{\tau}\), es decir, una serie de armónicos de \(\nu_1\).
-	Encuentre en la expresión de \(\psi(\nu)\) el término que depende de \(\tau\) responsable de este comportamiento y verifique \(\nu_p\). 
+	\item El rasgo más prominente de \(\hat{\phi }(\nu)\) son picos en \(\nu_p = p \nu_1 \; (p \in \mathbb{N})\) donde \(\nu_1 = \frac{1}{\tau}\), es decir, una serie de armónicos de \(\nu_1\).
+	Encuentre en la expresión de \(\hat{\phi }(\nu)\) el término que depende de \(\tau\) responsable de este comportamiento y verifique \(\nu_p\). 
 	
 	\item De similar análisis identifique qué término con dependencia en \(\Delta t\) hace que los armónicos más importantes se detecten en \(0 < \nu < \frac{1}{\Delta t}\).
 
@@ -81,7 +82,7 @@
 \begin{minipage}[t][2.1cm]{0.6\textwidth}
 Dos cuerdas semi-infinitas de distinta densidad lineal de masa, $\lambda_{m\,\text{izq}}$ y $\lambda_{m\,\text{der}}$, están unidas en un punto y sometidas a una tensión $T_0$.
 Sobre la primera se propaga hacia la derecha el pulso que muestra la figura.
-Se conocen $\lambda_{m\,\text{izq}}$, $\lambda_{m\,\text{der}}$, $T_0$, $\Delta x$ y $h$, y se considera que los medios son no dispersivos.
+Se conocen $\lambda_{m\,\text{izq}}$, $\lambda_{m\,\text{der}}$, $T_0$, $x_0$, $\Delta x$ y $h$, y se considera que los medios son no dispersivos.
 \end{minipage}
 \begin{minipage}[c][0.4cm][t]{0.34\textwidth}
 	\begin{tikzpicture}
@@ -111,6 +112,7 @@ Se conocen $\lambda_{m\,\text{izq}}$, $\lambda_{m\,\text{der}}$, $T_0$, $\Delta 
 		\draw [ultra thick, gray] (0,0) -- ({\xmax-.3},0) node [near end, above] {\(\lambda_{m\,\mathrm{der}}\)};	% cuerda der
 		\draw [thin, dashed] (0,\haute) node [anchor = west] {\( h \)} -- (quiebreSuperior);
 		\dimline [label style= {above=0}, extension start length=-0.6, extension end length=-0.6]{(-1.5,-.6)}{(-0.5,-.6)}{\( \Delta x \)};
+		\dimline [label style= {above=0}, extension start length=0.4, extension end length=0.4]{($(quiebreSuperior) + (0, 0.4)$)}{(0, \haute + 0.4)}{\( x_0 \)};
 	\end{tikzpicture}
 % 	\includegraphics[width=\textwidth]{ej2-20}
 \end{minipage}
