@@ -10,13 +10,13 @@
 	\draw [ultra thick] (origenDioptra) arc(180 : 180 - \arcoDioptra : \radioDioptra);
 	\draw [ultra thick] (origenDioptra) arc(180 : 180 + \arcoDioptra : \radioDioptra);
 	\draw [thin, -LaTeX] (centroDioptra) -- (interseccionDioptra) node [midway, below, rotate = -18] {\(R\)};
-	\draw [-latex] ($(centroDioptra) - (1,0)$) arc(180 : {180-atan{0.34}} : 1) node [midway, left] {$\beta$};
+	\draw [-latex] ($(centroDioptra) - (1,0)$) arc(180 : {180-atan{0.34}} : 1) node [midway, left] {$\varphi$};
 	\draw [thick, blue, -LaTeX] (so) -- (interseccionDioptra);
 	\draw [-latex] ($(so) + (0.6,0)$) arc(0 : {atan{0.57}} : 1) node [midway, right] {$\alpha$};
 	% \dimline[line style ={line width=0.7}]{($(so) - (0,0.5)$)}{($(origenDioptra) - (0,0.5)$)}{$s$};
 	\dimline[line style ={line width=0.7},extension start length=-0.5,extension end length=-0.1]{($(so) - (0,0.5)$)}{($(origenDioptra) - (0,0.5)$)}{$s$};
 	\draw [thick, blue, LaTeX- ] (si) -- (interseccionDioptra);
-	\draw [-latex] ($(si) - (1.7,0)$) arc(180 : {180-atan{0.4}} : 1) node [midway, left] {$\varphi$};
+	\draw [-latex] ($(si) - (1.7,0)$) arc(180 : {180-atan{0.4}} : 1) node [midway, left] {$\beta$};
 	% \dimline[line style ={line width=0.7}]{($(origenDioptra) - (0,0.5)$)}{($(si) - (0,0.5)$)}{$s'$};
 	\dimline[line style ={line width=0.7},extension start length=-0.1,extension end length=-0.09]{($(origenDioptra) - (0,0.5)$)}{($(si) - (0,0.5)$)}{$s'$};
 \end{tikzpicture}
