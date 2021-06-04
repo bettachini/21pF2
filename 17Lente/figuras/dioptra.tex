@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+	\def \arcoDioptra{30};
+	\def \radioDioptra{3};
+	\coordinate (origenDioptra) at (-1,0);
+	\coordinate (so) at (-3,0);
+	\coordinate (centroDioptra) at (\radioDioptra,0);
+	\coordinate (si) at (1.5,0);
+	\coordinate (interseccionDioptra) at ({2 - \radioDioptra*cos(25)},{\radioDioptra*sin(25)});
+	\draw [thin, dashed] (-3.5,0) -- (3.5,0) node [anchor=north] {eje óptico} ;
+	\draw [ultra thick] (origenDioptra) arc(180 : 180 - \arcoDioptra : \radioDioptra);
+	\draw [ultra thick] (origenDioptra) arc(180 : 180 + \arcoDioptra : \radioDioptra);
+	\draw [thin, -LaTeX] (centroDioptra) -- (interseccionDioptra) node [midway, above, rotate = -18] {\(R\)};
+	\draw [-latex] ($(centroDioptra) - (1,0)$) arc(180 : {180-atan{0.34}} : 1) node [midway, left] {$\beta$};
+	\draw [thick, blue, -LaTeX] (so) -- (interseccionDioptra);
+	\draw [-latex] ($(so) + (1,0)$) arc(0 : {atan{0.57}} : 1) node [midway, right] {$\alpha$};
+	\dimline[line style ={line width=0.7},extension start length=-0.24,extension end length=-0.24]{($(so) - (0,0.5)$)}{($(origenDioptra) - (0,0.5)$)}{$s$};
+	\draw [thick, blue, LaTeX- ] (si) -- (interseccionDioptra);
+	\draw [-latex] ($(si) - (1,0)$) arc(180 : {180-atan{0.57}} : 1) node [midway, left] {$\varphi$};
+	\dimline[line style ={line width=0.7},extension start length=-0.24,extension end length=-0.24]{($(origenDioptra) - (0,0.5)$)}{($(si) - (0,0.5)$)}{$s'$};
+\end{tikzpicture}
